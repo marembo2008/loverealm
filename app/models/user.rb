@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
                   :emailsecret, :secretcode
   
 
-  mount_uploader :avatar, AvatarUploader
+  #mount_uploader :avatar, AvatarUploader
   before_save do |user|
     require 'digest/md5'
     user.email = email.downcase
