@@ -8,9 +8,9 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password
       t.string :password_confirmation
       t.string :avatar
-      t.bool :validated
+      t.boolean :validated
       t.string :validation_code
-      t.string, :emailsecret
+      t.string :emailsecret
       t.string :secretcode
       t.string :country
 

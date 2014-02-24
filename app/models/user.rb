@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
-  attr_accessible :fname,:lname, :country, :birthday, :email,
+  attr_accessor :fname,:lname, :country, :birthday, :email,
                   :password,  :password_confirmation,:avatar,
                   :validated, :validation_code,
                   :emailsecret, :secretcode
-  has_secure_password
+  
 
   mount_uploader :avatar, AvatarUploader
   before_save do |user|

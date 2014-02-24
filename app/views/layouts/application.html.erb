@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Loverealm</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+		<title>Loverealm</title>
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+		<%= stylesheet_link_tag    "main-styles", media: "all", "data-turbolinks-track" => true %>
+		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="header">
+			<div class="menu-hd">
+				<div class="menu">
+					<a href="#" class="home"> <%= image_tag(image_path('home.jpg'))%> <span>Home</span> </a>
+					<a href="#">Blog</a>
+					<a href="#">Christian APPS</a>
+					<a href="#">About Us</a>
+					<a href="#">About Jesus</a>
+					<a href="#">Support Us</a>
+				</div>
+				<div class="social" align="right">
+					<a href="#" class="gp"></a>
+					<a href="#" class="tt"></a>
+					<a href="#" class="fb"></a>
+					<span>We are social:</span>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="main">
+				<div class="lp">
+					<div class="lm">
+						<%= image_tag(image_path('menu.png'), :class=>"mop")%>
+						<%= image_tag(image_path('logo.jpg'), :class=>"logo")%>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="ct">
+					<div class="ds">
+						<input type="text" class="search" placeholder="Seek and you shall find! (Mathew 7:7)"/>
+						<%= image_tag(image_path('search.png'))%>
+					</div>
+				</div>
+				<div class="rp" align="right" style="text-align: right">
+					<div class="lj">
+						<a href="#">Login</a>
+						<div class="line"></div>
+						<a href="#">Join</a>
+						<div class="clear"></div>
+					</div>
+					<div class="l-avatar">
+						<%= image_tag(image_path('login.png'))%>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		<%= yield %>
 
-<%= yield %>
-
-</body>
+	</body>
 </html>

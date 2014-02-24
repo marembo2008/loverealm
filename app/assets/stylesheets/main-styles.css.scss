@@ -1,0 +1,258 @@
+html, body, div, span, a, input, select, section, label, option {
+	font-size:14px;
+	padding:0px;
+	margin:0px;
+	background:transparent;
+	color: #000;
+	font-family: "FF Tisa",Calibri,Candara;
+}
+html, body{
+  background: rgb(244, 242, 248);
+}
+.clear {
+	clear:both;
+}
+div.header {
+	width: 100%;
+}
+div.header .menu-hd {
+	color:#fff;
+	text-transform:capitalize;
+	height: 30px;
+	background: #000;
+	position: relative;
+}
+
+div.header .menu-hd .menu {
+	float:left;
+	width: 68%;
+	height: 100%;
+	margin-left: 1.5%;
+}
+div.header .menu-hd .social {
+	float:right;
+	background: #dd3434;
+	width: 28%;
+  height: 100%;
+	text-align: right;
+	padding-right: 2%;
+}
+div.header .menu-hd .social span, div.header .menu-hd .social a{
+  color: white;
+  font-weight: bold;
+  padding: 1.7% 0px;
+  display: block;
+float: right;
+}
+div.header .menu-hd .menu a {
+	margin-right:7%;
+	color: #fff;
+	text-decoration: none;
+	float: left;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+div.header .menu-hd .menu a.home{
+margin-top: 1px;
+display: block;
+position: relative;
+width: 50px;
+}
+div.header .menu-hd .menu a.home img{
+  position: absolute;
+  top: 3px;
+}
+div.header .menu-hd .menu a.home span{
+color: white;
+  position: absolute;
+  top: 4px;
+  left: 25px;
+}
+
+div.header .menu-hd .social a.fb, div.header .menu-hd .social a.tt, div.header .menu-hd .social a.gp{
+  background-image: url(image_path('facebook.png'));
+  background-position-x: 0px;
+  background-position-y: 1px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 1px;
+  height: 25px;
+  width: 25px;
+  padding: 0px;
+  margin-left: 30px;
+background-color: #fff;
+border-radius: 100px;
+}
+
+div.header .menu-hd .social a.tt{
+  background-image: url(image_path('twitter_128.png'));
+}
+
+div.header .menu-hd .social a.gp{
+  background-image: url(image_path('google_plus_128.png'));
+}
+
+div.main{
+  width: 96%;
+  margin: 10px 2%;
+}
+div.main .lp, div.main .ct, div.main .rp{
+  float: left;
+}
+div.main .lp{
+  width: 20%;
+}
+
+div.main .lp .lm{
+  position: relative;
+  width: 100%;
+}
+
+div.main .lp .mop{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 30%;
+}
+
+div.main .lp .logo{
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  height: 40px;
+  position: absolute;
+}
+
+div.main .ct{
+  width: 55%;
+  margin-left: 15%;
+}
+
+div.main .rp{
+  width: 30%;
+  padding-top: 20px;
+}
+div.main .ct .ds{
+  position: relative;
+  margin-top: 5px;
+  width: 98%;
+}
+div.main .ct .ds input.search{
+  background: #fff;
+  border: 1px solid #dd3434;
+  box-shadow: none;
+  height: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 98%;
+  padding-left: 10px;
+font-style: italic;
+}
+
+div.main .ct .ds img{
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+
+div.main .rp .lj{
+  width: 30%;
+  float: right;
+}
+
+div.main .rp .l-avatar{
+  width: 30%;
+  float: right;
+  margin-right: 5px;
+}
+
+div.main .rp .lj a, div.main .rp .lj .line{
+  float: left;
+  color: #555;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+div.main .rp .lj .line{
+  width: 2px;
+  background-color: #999;
+  height: 12px;
+  margin: 12px 10px;
+}
+
+div.main .lp .mop{
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+  div.header .menu-hd {
+    display: none;
+  }
+  div.main .lp{
+  margin-bottom: 20px;
+  width: 15%;
+  }
+  div.main .lp .mop{
+    display: block;
+    height: 15px;
+    width: 18%;
+    margin-top: 3px;
+  }
+  div.main .lp .logo{
+    left: 28%;
+    height: 20px;
+    width: 70%;
+  }
+div.main .ct{
+  width: 50%;
+  margin-left: 2%;
+}
+
+div.main .ct .ds{
+  margin-top: 0px;
+}
+div.main .ct .ds input.search{
+  height: 20px;
+  font-size: 10px;
+  
+}
+div.main .ct .ds img{
+  top: 4px; 
+  right: 0px;
+}
+div.main .rp{
+  width: 15%;
+  float:right;
+  padding-top: 0px;
+}
+div.main .rp .l-avatar{
+  width: 20%;
+  margin-right: 5%; 
+}
+div.main .rp .l-avatar img{
+  width: 100%;
+}
+div.main .rp .lj a{
+  margin-top: 8px;
+}
+div.main .rp .lj{
+  width: 68%;
+}
+div.main .rp .lj a{
+  font-size: 10px;
+}
+div.main .rp .lj .line{
+  margin: 10px 5px;
+  width: 1px;
+  height: 8px;
+}
+}
+
+@media only screen and (max-width: 500px){
+  div.main .rp{
+    width: 20%;
+  }
+}
