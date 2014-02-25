@@ -1,0 +1,131 @@
+div.main .ct.home img{
+  height: 350px;
+}
+
+div.main .ct.home h4, div.main .ct.home p{
+  margin: 5px auto;
+}
+
+div.main .ct .hst{
+  width: 95%;
+  background: #dd3434;
+  height: 30px;
+  padding: 5px 1%;
+  margin-top: 10px;
+}
+
+div.main .ct .hst a{
+  color: #ff6666;
+  text-decoration: none;
+  padding: 4px 3.3%;
+  display: block;
+  float: left;
+  font-weight: bold;
+}
+
+div.main .ct .hst a.more{
+  background-image: url(image_path('icon-chevron-down-128.png'));
+  background-repeat: no-repeat;
+  background-position: 100% 5px;
+  background-size: 18px 20px;
+}
+
+div.main .ct .hst a.selected{
+  color: #fff;
+}
+
+div.main .ct .stories{
+  background: #fff;
+  box-shadow: 0px 0px 1px 1px #f4f2f8;
+  width: 95%;
+  padding: 5px 1%;
+}
+
+div.main .ct.home .stories hr{
+  width: 102%;
+  margin-left: -1%;
+}
+
+div.main .ct.home .stories hr:last-child{
+ display: none;
+}
+
+
+div.main .ct .stories .sp table tr td:first-child{
+  width: 124px;
+}
+
+div.main .ct .stories .sp table tr td img{
+  width: 120px;
+  margin: 1px;
+  border-radius: 100px;
+  height: 130px;
+}
+
+div.main .ct .stories .sp .po a{
+  color: #dd3434;
+  display: block;
+  padding: 0px 10px;
+  float: left;
+  border-right: 2px solid #dd3434;
+  font-weight: bolder;
+  text-decoration: none;
+}
+div.main .ct .stories .sp .po a:first-child{
+  padding-left: 0px;
+}
+
+div.main .ct.home .stories .sp .po a:last-child{
+  border-right: 0px none;
+}
+
+@media only screen and (max-width: 700px){
+  div.main .lp.home{
+    display: none;
+  }
+  div.main .ct.home{
+    margin-left: 0px;
+    width: 69%;
+    margin-top: -5px;
+  }
+  div.main .ct.home img{
+    height: 250px;
+  }
+  div.main .ct .hst{
+    height: 20px;
+  }
+  div.main .ct .hst a{
+    font-size: 11px;
+    padding: 4px 1.8%;
+  }
+  div.main .ct .hst a.more{
+    background-position: 100% 7px;
+    background-size: 10px 10px;
+    padding-left: 0px;
+    padding-right: 3%;
+  }
+  div.main .ct .stories .sp table tr td:first-child{
+  width: 80px;
+}
+
+div.main .ct .stories .sp table tr td img{
+  width: 80px;
+  height: 90px;
+}
+
+div.main .ct .stories .sp table tr td h4{
+  font-size: 12px;
+}
+
+div.main .ct .stories .sp table tr td p{
+  font-size: 10px;
+}
+
+div.main .ct .stories .sp table tr td a{
+  font-size: 10px;
+}
+div.main .ct.home .stories hr{
+  width: 101.7%;
+}
+
+}
