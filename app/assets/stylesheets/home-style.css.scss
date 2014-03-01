@@ -5,7 +5,12 @@ div.main .ct.home img{
 div.main .ct.home h4, div.main .ct.home p{
   margin: 5px auto;
 }
-
+div.main .ct .hst-menu{
+  overflow-x: auto;
+}
+div.main .ct .hst-menu .panel{
+  display: none;
+}
 div.main .ct .hst{
   width: 95%;
   background: #dd3434;
@@ -32,6 +37,13 @@ div.main .ct .hst a.more{
 
 div.main .ct .hst a.selected{
   color: #fff;
+}
+
+div.main .ct.home .img{
+  background-image: url(image_path('banner.jpg'));
+  background-size: 97% 350px;
+  width: 100%;
+  height: 350px;
 }
 
 div.main .ct .stories{
@@ -79,7 +91,7 @@ div.main .ct.home .stories .sp .po a:last-child{
   border-right: 0px none;
 }
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
   div.main .lp.home{
     display: none;
   }
@@ -88,7 +100,8 @@ div.main .ct.home .stories .sp .po a:last-child{
     width: 69%;
     margin-top: -5px;
   }
-  div.main .ct.home img{
+  div.main .ct.home .img{
+    background-size: 97% 250px;
     height: 250px;
   }
   div.main .ct .hst{
@@ -127,5 +140,109 @@ div.main .ct .stories .sp table tr td a{
 div.main .ct.home .stories hr{
   width: 101.7%;
 }
+@media only screen and (max-width: 600px){
+  div.main .ct.home .img{
+    background-size: 97% 200px;
+    height: 200px;
+  }
+  div.main .ct .hst-menu{
+    width: 97%;
+    padding: 0px;
+    margin: 0px;
+  }
+  div.main .ct .hst{
+    width: 140%;
+  }
+}
+@media only screen and (max-width: 500px){
+  div.header .main{
+    margin-bottom: 0px;
+  }
+  div.main .rp.home{
+    display: none;
+  }
+  div.main.home{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -60px;
+  }
+  div.main .ct.home{
+    width: 100%;
+    margin: 0%;
+    padding: 0;
+    position: inherit;
+  }
+  div.main .ct.home .img{
+    background-image: url(image_path('jesus.jpg'));
+    background-size: 100% 100%;
+    width: 100%;
+    height: 160px;
+  }
+  div.main .ct .hst{
+    width: 150%;
+  }
+  div.main .ct .stories{
+    width: 98.9%;
+    padding: 0;
+    margin: 0px;
+  }
+  div.main .ct .hst-menu{
+    width: 100%;
+  }
+  div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst{
+    display: block;
+    width: 120%;
+    padding: 10px 0px;
+  }
+  div.main .ct .hst-menu .panel .info{
+    background: #fff;
+    width: 30%;
+    float: left;
+    box-shadow: 0px 0px 2px 1px #d4d2d8;
+    height: 90px;
+  }
+  div.main .ct .hst-menu .panel .info:first-child{
+    border-left: 0px none;
+    margin-right: 5%;
+  }
+  div.main .ct .hst-menu .panel .info.lc{
+    margin-right: 0;
+    border-right: 0px none;
+    margin-left: 5%;
+  }
+  div.main .ct .hst-menu .panel .info img{
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 400px){
+  div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst{
+    width: 200%;
+  }
+  div.main .ct .stories .sp .po a{
+    font-size: 9px;
+  }
+}
 
+@media only screen and (max-width: 250px){
+  div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst{
+    width: 250%;
+  }
+  div.main .ct .stories .sp .po a{
+    text-align: left;
+    display: block;
+    border: 0px none;
+    padding: 0px;
+    margin: 0px;
+    width: 90%;
+  }
+  div.main .ct .stories .sp table tr td:first-child{
+    width: 50px;
+  }
+  div.main .ct .stories .sp table tr td img{
+  width: 40px;
+  height: 50px;
+}
+}
 }
