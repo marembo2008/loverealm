@@ -1,5 +1,44 @@
-div.main .ct.home img{
-  height: 350px;
+div.main .lp.home{
+  text-align: right;
+  padding-top: 50px;
+  width: 14%;
+  position: relative;
+  height: 400px;
+}
+
+div.main .lp.home .loverealm-info{
+  position: absolute;
+  bottom: 10px;
+  text-align: left;
+}
+
+div.main .lp.home .loverealm-info a, div.main .lp.home .loverealm-info span{
+  font-size: 12px;
+}
+
+div.main .lp.home .loverealm-info .use a{
+  float: left;
+  color: #ee6666;
+  padding: 0px 5px;
+}
+
+div.main .lp.home .loverealm-info .use a:first-child{
+  padding-left: 0px;
+  border-right: 0.1em solid #dd6666;
+}
+
+div.main .lp.home a{
+  text-decoration: none;
+  display: block;
+}
+
+div.main .lp.home .active{
+  color: #aaa;
+}
+
+
+div.main .ct.home{
+margin-left: 1%;
 }
 
 div.main .ct.home h4, div.main .ct.home p{
@@ -41,8 +80,8 @@ div.main .ct .hst a.selected{
 
 div.main .ct.home .img{
   background-image: url(image_path('banner.jpg'));
-  background-size: 97% 350px;
-  width: 100%;
+  background-size: 100% 350px;
+  width: 97%;
   height: 350px;
 }
 
@@ -91,14 +130,146 @@ div.main .ct.home .stories .sp .po a:last-child{
   border-right: 0px none;
 }
 
+/*right panel*/
+
+div.main .rp.home .info{
+  width: 90%;
+  margin: 2px 3% 3%;
+  padding: 2px 2%;
+  box-shadow: 0px 0px 1px 0.01em #d4d2d8;
+  height: 100px;
+  background: #fff;
+  position: relative;
+}
+
+div.main .rp.home .info .h8,
+ div.main .rp.home .info p,
+ div.main .rp.home .info .trend,
+ div.main .rp.home .info .trend .txt
+ {
+  font-size: 9px;
+  padding-left: 0px;
+}
+
+div.main .rp.home .info p{
+  margin: 2px;
+  font-size: 10px;
+}
+
+div.main .rp.home .info .trend{
+  width: 48%;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  display: block;
+  margin-top: 5px;
+  padding-left: 3px;
+}
+
+div.main .rp.home .info .trend .txt{
+  color: #ee6666;
+  font-weight: bold;
+  margin-left: 4px;
+}
+div.main .rp.home .info .trend:last-child .txt{
+  margin-left: 0px;
+}
+
+div.main .rp.home .info:nth-child(2){
+  height: 110px;
+}
+
+div.main .rp.home .info .h8.hd{
+  color: #ee6666; 
+  font-weight: bolder;
+   font-size: 14px;
+    padding-top: 5px;
+}
+
+div.main .rp.home .info .social{
+  position: absolute;
+  bottom: 2px;
+  width: 50%;
+  height: 15px;
+  padding-left: 3px;
+}
+
+div.main .rp.home .info .social a{
+  background-size: 100% 100%;
+  width: 12px;
+  height: 12px;
+  float: left;
+  margin-right: 5px;
+}
+
+div.main .rp.home .info .social a.fb{
+  background-image: url(image_path('f.jpg'));
+}
+
+div.main .rp.home .info .social a.tt{
+  background-image: url(image_path('t.jpg'));
+}
+
+div.main .rp.home .info .social a.gp{
+  background-image: url(image_path('l.jpg'));
+}
+
+@media only screen and (min-width: 810px){
+  div.main .rp.home{
+    padding-top: 0px;
+  }
+  div.main .rp.home .info{
+    height: 150px;
+    padding-top: 15px;
+  }
+  
+div.main .rp.home .info:nth-child(2){
+  height: 160px;
+}
+  
+div.main .rp.home .info .h8,
+ div.main .rp.home .info p,
+ div.main .rp.home .info .trend,
+ div.main .rp.home .info .trend .txt
+ {
+  font-size: 14px;
+  padding-left: 0px;
+}
+
+
+  div.main .rp.home .info .h8, div.main .rp.home .info .h8.hd{
+font-size: 20px;
+font-weight: bolder;
+}
+
+
+div.main .rp.home .info .social{
+  height: 30px;
+}
+
+div.main .rp.home .info .social a{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+
+}
+
 @media only screen and (max-width: 800px){
   div.main .lp.home{
     display: none;
   }
   div.main .ct.home{
     margin-left: 0px;
-    width: 69%;
+    width: 64%;
     margin-top: -5px;
+  }
+  div.main .rp.home {
+    width: 35%;
+    float: right;
+    margin-top: -5px;
+    padding-top: 0px;
   }
   div.main .ct.home .img{
     background-size: 97% 250px;
@@ -174,8 +345,8 @@ div.main .ct.home .stories hr{
     position: inherit;
   }
   div.main .ct.home .img{
-    background-image: url(image_path('jesus.jpg'));
-    background-size: 100% 100%;
+    background-position: 100% 100%;
+    background-size: 220% 220%;
     width: 100%;
     height: 160px;
   }
@@ -207,6 +378,9 @@ div.main .ct.home .stories hr{
     margin-right: 5%;
   }
   div.main .ct .hst-menu .panel .info.lc{
+    background-image: url(image_path('banner.jpg'));
+    background-position: 100% 0%;
+    background-size: 220% 220%;
     margin-right: 0;
     border-right: 0px none;
     margin-left: 5%;
