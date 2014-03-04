@@ -1,3 +1,24 @@
+@font-face {
+  font-family: 'FF Tisa';
+  src:font-url('TE111761.ttf');
+  src:font-url('TE114761.ttf');
+  src:font-url('TE115761.ttf');
+  src:font-url('TisaOT.otf');
+  src:font-url('TisaOT-Bold.otf');
+  src:font-url('TisaOT-BoldIta.otf');
+  src:font-url('TisaOT-Ita.otf');
+  src:font-url('TisaOT-Medi.otf');
+  src:font-url('TisaOT-MediIta.otf');
+  src:font-url('TisaPro-Bold.otf');
+  src:font-url('TisaPro-BoldIta.otf');
+  src:font-url('TisaPro-Ita.otf');
+  src:font-url('TisaPro-Medi.otf');
+  src:font-url('TisaPro-MediIta.otf');
+  src:font-url('TisaPro-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body, div, span, a, input, select, section, label, option {
 	font-size:14px;
 	padding:0px;
