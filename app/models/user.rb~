@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   before_save do |user|
     require 'digest/md5'
     user.email = email.downcase
+    user.username = user.email
+    user.username = user.username.gsub(/(@.+)/, "")
     user.emailsecret =  Digest::MD5.hexdigest(user.email)
   end
 
