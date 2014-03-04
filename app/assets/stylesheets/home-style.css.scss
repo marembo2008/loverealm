@@ -18,7 +18,7 @@ div.main .lp.home .loverealm-info a, div.main .lp.home .loverealm-info span{
 
 div.main .lp.home .loverealm-info .use a{
   float: left;
-  color: #ee6666;
+  color: #C8140F;
   padding: 0px 5px;
 }
 
@@ -52,26 +52,35 @@ div.main .ct .hst-menu .panel{
 }
 div.main .ct .hst{
   width: 95%;
-  background: #dd3434;
+  background: #C8140F;
   height: 30px;
   padding: 5px 1%;
   margin-top: 10px;
 }
 
 div.main .ct .hst a{
-  color: #ff6666;
+  color: #FF6666;
   text-decoration: none;
-  padding: 4px 3.3%;
+  padding: 4px 2%;
   display: block;
   float: left;
   font-weight: bold;
 }
 
-div.main .ct .hst a.more{
-  background-image: url(image_path('icon-chevron-down-128.png'));
+div.main .ct .hst a, div.main .ct .hst a.more span.icon-text{
+  color: #FF8888;
+}
+
+div.main .ct .hst a.more span.icon-text, div.main .ct .hst a.more span.icon{
+  float: left;
+}
+div.main .ct .hst a.more span.icon{
+  background-image: url(image_path('888888_256x240_icons_icons.png'));
   background-repeat: no-repeat;
-  background-position: 100% 5px;
-  background-size: 18px 20px;
+  width: 30px;
+  height: 28px;
+  background-position: -172px -51px;
+  background-size: 2200%;
 }
 
 div.main .ct .hst a.selected{
@@ -114,11 +123,11 @@ div.main .ct .stories .sp table tr td img{
 }
 
 div.main .ct .stories .sp .po a{
-  color: #dd3434;
+  color: #C8140F;
   display: block;
   padding: 0px 10px;
   float: left;
-  border-right: 2px solid #dd3434;
+  border-right: 2px solid #C8140F;
   font-weight: bolder;
   text-decoration: none;
 }
@@ -133,10 +142,10 @@ div.main .ct.home .stories .sp .po a:last-child{
 /*right panel*/
 
 div.main .rp.home .info{
-  width: 90%;
-  margin: 2px 3% 3%;
+  width: 95%;
+  margin: 2px 0 3% 1%;
   padding: 2px 2%;
-  box-shadow: 0px 0px 1px 0.01em #d4d2d8;
+  box-shadow: 0px 0px 2px 0.02em #c4d2d8;
   height: 100px;
   background: #fff;
   position: relative;
@@ -168,10 +177,16 @@ div.main .rp.home .info .trend{
 }
 
 div.main .rp.home .info .trend .txt{
-  color: #ee6666;
+  color: #C8140F;
   font-weight: bold;
   margin-left: 4px;
 }
+
+div.main .rp.home .info .trend .num{
+  width: 20px;
+  text-align: right;
+}
+
 div.main .rp.home .info .trend:last-child .txt{
   margin-left: 0px;
 }
@@ -181,7 +196,7 @@ div.main .rp.home .info:nth-child(2){
 }
 
 div.main .rp.home .info .h8.hd{
-  color: #ee6666; 
+  color: #C8140F; 
   font-weight: bolder;
    font-size: 14px;
     padding-top: 5px;
@@ -215,6 +230,44 @@ div.main .rp.home .info .social a.gp{
   background-image: url(image_path('l.jpg'));
 }
 
+// flikcr section
+div.main .rp.home .info.flickr{
+  height: 250px;
+  overflow: hidden;
+}
+div.main .rp.home .info.flickr .flickrs{
+  background-image: url(image_path('flikr.jpg'));
+  background-position: 0 -60px;
+  background-size: 100% 130%;
+  height: 200px;
+  width: 100%;
+}
+div.main .rp.home .info.flickr div.title, div.main .rp.home .info.flickr .r-green, div.main .rp.home .info.flickr .r-blue{
+  float: left;
+  margin-right: 15px;
+  width: 40px;
+  font-size: 20px;
+  z-index: 34;
+}
+div.main .rp.home .info.flickr .r-green, div.main .rp.home .info.flickr .r-blue{
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100px;
+  background: #ff0077;
+  margin-right: 2px;
+  margin-top: 7px;
+}
+
+div.main .rp.home .info.flickr  p a.visit{
+  text-decoration: none;
+  color: #C8140F;
+}
+
+div.main .rp.home .info.flickr .r-blue{
+  background: #0000ff;
+}
+
 @media only screen and (min-width: 810px){
   div.main .rp.home{
     padding-top: 0px;
@@ -233,7 +286,7 @@ div.main .rp.home .info .h8,
  div.main .rp.home .info .trend,
  div.main .rp.home .info .trend .txt
  {
-  font-size: 14px;
+  font-size: 0.95em;
   padding-left: 0px;
 }
 
@@ -245,12 +298,12 @@ font-weight: bolder;
 
 
 div.main .rp.home .info .social{
-  height: 30px;
+  height: 20px;
 }
 
 div.main .rp.home .info .social a{
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   margin-right: 10px;
 }
 

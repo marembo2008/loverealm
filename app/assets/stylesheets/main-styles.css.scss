@@ -13,15 +13,21 @@ html, body{
 	clear:both;
 }
 h4{
-  color: #dd3434;
+  color: #C8140F;
+}
+div.main-bd{
+  margin-top: 100px;
 }
 div.header {
 	width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 30;
 }
 div.header .menu-hd {
 	color:#fff;
 	text-transform:capitalize;
-	height: 30px;
+	height: 23px;
 	background: #000;
 	position: relative;
 }
@@ -34,7 +40,7 @@ div.header .menu-hd .menu {
 }
 div.header .menu-hd .social {
 	float:right;
-	background: #dd3434;
+	background: #C8140F;
 	width: 28%;
   height: 100%;
 	text-align: right;
@@ -43,16 +49,16 @@ div.header .menu-hd .social {
 div.header .menu-hd .social span, div.header .menu-hd .social a{
   color: white;
   font-weight: bold;
-  padding: 1.7% 0px;
+  padding: 1.4% 0px;
   display: block;
-float: right;
+  float: right;
 }
 div.header .menu-hd .menu a {
 	margin-right:7%;
 	color: #fff;
 	text-decoration: none;
 	float: left;
-	margin-top: 5px;
+	margin-top: 2px;
 	font-weight: bold;
 }
 
@@ -64,41 +70,50 @@ width: 50px;
 }
 div.header .menu-hd .menu a.home img{
   position: absolute;
-  top: 3px;
+  top: 2px;
 }
 div.header .menu-hd .menu a.home span{
 color: white;
   position: absolute;
-  top: 4px;
+  top: 2px;
   left: 25px;
 }
 
+div.header .menu-hd .social span{
+  padding-top: 2px;
+}
+
 div.header .menu-hd .social a.fb, div.header .menu-hd .social a.tt, div.header .menu-hd .social a.gp{
-  background-image: url(image_path('facebook.png'));
-  background-position-x: 0px;
-  background-position-y: 1px;
+  background-image: url(image_path('46-facebook-128.png'));
+  background-position: -3px -3px;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 123% 120%;
   margin-top: 1px;
-  height: 25px;
-  width: 25px;
+  height: 21px;
+  width: 21px;
   padding: 0px;
   margin-left: 30px;
-background-color: #fff;
-border-radius: 100px;
+  margin-top: 1px;
+  background-color: #fff;
+  border-radius: 100px;
 }
 
 div.header .menu-hd .social a.tt{
-  background-image: url(image_path('twitter_128.png'));
+  background-image: url(image_path('43-twitter-128.png'));
 }
 
 div.header .menu-hd .social a.gp{
-  background-image: url(image_path('google_plus_128.png'));
+  background-image: url(image_path('80-google-plus-128.png'));
 }
 
 div.main{
   width: 96%;
   margin: 10px 2%;
+}
+div.header .main{
+  background: rgba(244, 242, 248, 0.8);
+  margin-top: 0px;
+  padding-top: 10px;
 }
 div.main .lp, div.main .ct, div.main .rp{
   float: left;
@@ -122,8 +137,8 @@ div.main .lp .mop{
 div.main .lp .logo{
   left: 0px;
   top: 0px;
-  width: 50%;
-  height: 40px;
+  width: 65%;
+  height: 60px;
   position: absolute;
 }
 
@@ -143,7 +158,7 @@ div.main .ct .ds{
 }
 div.main .ct .ds input.search{
   background: #fff;
-  border: 1px solid #dd3434;
+  border: 1px solid #C8140F;
   box-shadow: none;
   height: 30px;
   position: absolute;
@@ -151,7 +166,8 @@ div.main .ct .ds input.search{
   left: 0px;
   width: 98%;
   padding-left: 10px;
-font-style: italic;
+  font-style: italic;
+  color: #000;
 }
 
 div.main .ct .ds img{
