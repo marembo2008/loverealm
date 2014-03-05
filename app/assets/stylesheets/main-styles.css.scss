@@ -265,8 +265,8 @@ div.main .lp .mop{
     display: none;
   }
   div.main .lp{
-  margin-bottom: 20px;
-  width: 15%;
+    margin-bottom: 20px;
+    width: 15%;
   }
   div.main .lp .mop{
     display: block;
@@ -301,28 +301,28 @@ div.main .lp .mop{
     float:right;
     padding-top: 0px;
   }
-div.main .rp .l-avatar{
-  width: 20%;
-  margin-right: 5%; 
-  margin-top: 4px;
-}
-div.main .rp .l-avatar img{
-  width: 100%;
-}
-div.main .rp .lj a{
-  margin-top: 8px;
-}
-div.main .rp .lj{
-  width: 68%;
-}
-div.main .rp .lj a{
-  font-size: 10px;
-}
-div.main .rp .lj .line{
-  margin: 10px 5px;
-  width: 1px;
-  height: 8px;
-}
+  div.main .rp .l-avatar{
+    width: 20%;
+    margin-right: 5%; 
+    margin-top: 4px;
+  }
+  div.main .rp .l-avatar img{
+    width: 100%;
+  }
+  div.main .rp .lj a{
+    margin-top: 8px;
+  }
+  div.main .rp .lj{
+    width: 68%;
+  } 
+  div.main .rp .lj a{
+    font-size: 10px;
+  }
+  div.main .rp .lj .line{
+    margin: 12px 5px;
+    width: 1px;
+    height: 8px;
+  }
 }
 
 @media only screen and (max-width: 600px){

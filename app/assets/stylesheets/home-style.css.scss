@@ -208,9 +208,8 @@ div.main .rp.home .info:nth-child(2){
 
 div.main .rp.home .info .h8.hd{
   color: #C8140F; 
-  font-weight: bolder;
-   font-size: 14px;
-    padding-top: 5px;
+  font-size: 14px;
+  padding-top: 5px;
 }
 
 div.main .rp.home .info .social{
@@ -287,38 +286,27 @@ div.main .rp.home .info.flickr .r-blue{
     height: 150px;
     padding-top: 15px;
   }
-  
-div.main .rp.home .info:nth-child(2){
-  height: 160px;
-}
-  
-div.main .rp.home .info .h8,
- div.main .rp.home .info p,
- div.main .rp.home .info .trend,
- div.main .rp.home .info .trend .txt
- {
-  font-size: 0.95em;
-  padding-left: 0px;
-}
-
-
+  div.main .rp.home .info:nth-child(2){
+    height: 160px;
+  }
+  div.main .rp.home .info .h8,
+  div.main .rp.home .info p,
+  div.main .rp.home .info .trend,
+  div.main .rp.home .info .trend .txt{
+    font-size: 0.95em;
+    padding-left: 0px;
+  }
   div.main .rp.home .info .h8, div.main .rp.home .info .h8.hd{
-font-size: 20px;
-font-weight: bolder;
-}
-
-
-div.main .rp.home .info .social{
-  height: 20px;
-}
-
-div.main .rp.home .info .social a{
-  width: 18px;
-  height: 18px;
-  margin-right: 10px;
-}
-
-
+    font-size: 20px;
+  }
+  div.main .rp.home .info .social{
+    height: 20px;
+  }
+  div.main .rp.home .info .social a{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
 }
 
 @media only screen and (max-width: 1025px){
@@ -488,6 +476,9 @@ div.main .rp.home .info .social a{
   div.main .ct .hst-menu.hst-fixed .panel{
     display: none;
   }
+  div.main .ct .hst-menu .panel .info h2, div.main .ct .hst-menu .panel .info h3{
+    font-size: 14px;
+  }
 }
 @media only screen and (max-width: 600px) and (min-width: 500px){
   div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst {
@@ -506,7 +497,7 @@ div.main .rp.home .info .social a{
   }
 }
 
-@media only screen and (max-width: 250px){
+@media only screen and (max-width: 320px){
   div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst{
     width: 250%;
   }
