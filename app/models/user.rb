@@ -24,7 +24,12 @@ class User < ActiveRecord::Base
 
   has_many :articlelikes, :foreign_key => "user_id", :dependent => :destroy
 
-  has_many :notifications, :foreign_key => "user_id", :dependent => :destroy, :order => 'updated_at DESC'
+  has_many :notifications, ->{order(updated_at: :desc)}, :foreign_key => "user_id", :dependent => :destroy
+
+ has_many :status_updates, -> {order(updated_at: :desc)}, :dependent => :destroy, :foreign_key => "uid"
+
+ has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "User_message"
+ has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "User_message" 
  
 def my_articles
 Post.find_by_user_id(self)
@@ -33,6 +38,11 @@ end
 def feed
    Post.from_users_followed_by(self)
 end
+
+   def  update_status(new_status_description)
+      @user = current_user
+      @status = status_update.create(:description => new_status_description, :uid => @user.id)
+   end
 
   def following?(other_user)
     relationships.find_by_followed_id(other_user.id)

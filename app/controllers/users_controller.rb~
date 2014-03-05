@@ -6,6 +6,25 @@ class UsersController < ApplicationController
   def index
   end
 
+  def feed
+      @articles = @user.feed
+   end
+
+  def following
+	@user = User.find(params[:id])
+	@users = @user.followed_users
+  end
+
+  def following
+	@user = User.find(params[:id])
+	@users = @user.followers
+  end
+
+   def  update_status(new_status_description)
+      @user = current_user
+      @status = status_update.create(:description => new_status_description, :uid => @user.id)
+   end
+
 private
   def correct_user
     @user = User.find(params[:id])
