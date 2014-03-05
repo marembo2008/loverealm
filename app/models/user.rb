@@ -28,8 +28,8 @@ class User < ActiveRecord::Base
 
  has_many :status_updates, -> {order(updated_at: :desc)}, :dependent => :destroy, :foreign_key => "uid"
 
- has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "User_message"
- has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "User_message" 
+ has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "UserMessage"
+ has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "UserMessage" 
  
 def my_articles
 Post.find_by_user_id(self)
