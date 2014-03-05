@@ -46,6 +46,7 @@ div.main .ct.home h4, div.main .ct.home p{
 }
 div.main .ct .hst-menu{
   overflow-x: auto;
+  width: 97%;
 }
 div.main .ct .hst-menu .panel{
   display: none;
@@ -56,6 +57,12 @@ div.main .ct .hst{
   height: 30px;
   padding: 5px 1%;
   margin-top: 10px;
+}
+
+div.main .ct .hst-menu.hst-fixed{
+  position: fixed;
+  top: 85px;
+  width: 52.8%;
 }
 
 div.main .ct .hst a{
@@ -314,7 +321,7 @@ div.main .rp.home .info .social a{
 
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1025px){
   div.main .lp.home{
     display: none;
   }
@@ -329,12 +336,16 @@ div.main .rp.home .info .social a{
     margin-top: -5px;
     padding-top: 0px;
   }
+  div.main .rp.home .info.pn {
+    height: 130px;
+  }
   div.main .ct.home .img{
     background-size: 97% 250px;
     height: 250px;
   }
   div.main .ct .hst{
     height: 20px;
+    width: 98%;
   }
   div.main .ct .hst a{
     font-size: 11px;
@@ -346,28 +357,51 @@ div.main .rp.home .info .social a{
     padding-left: 0px;
     padding-right: 3%;
   }
+  div.main .ct .hst a.more span.icon-text{
+    font-size: 11px;
+  }
+  div.main .ct .hst-menu.hst-fixed{
+    position: fixed;
+    top: 31px;
+    width: 59.55%;
+  }
   div.main .ct .stories .sp table tr td:first-child{
-  width: 80px;
-}
+    width: 80px;
+  }
 
-div.main .ct .stories .sp table tr td img{
-  width: 80px;
-  height: 90px;
-}
+  div.main .ct .stories .sp table tr td img{
+    width: 80px;
+    height: 90px;
+  }
 
-div.main .ct .stories .sp table tr td h4{
-  font-size: 12px;
-}
+  div.main .ct .stories .sp table tr td h4{
+    font-size: 12px;
+  }
 
-div.main .ct .stories .sp table tr td p{
-  font-size: 10px;
-}
+  div.main .ct .stories .sp table tr td p{
+    font-size: 10px;
+  }
 
-div.main .ct .stories .sp table tr td a{
-  font-size: 10px;
+  div.main .ct .stories .sp table tr td a{
+    font-size: 10px;
+  }
+  div.main .ct.home .stories hr{
+    width: 101.7%;
+  }
+  div.main .rp.home .info .trend .txt{
+    font-size: 8px;
+  }
 }
-div.main .ct.home .stories hr{
-  width: 101.7%;
+@media only screen and (max-width: 1025px) and (min-width: 800px){
+  div.main .rp.home .info.pn {
+    height: 155px;
+  }
+  div.main .rp.home .info .trend .txt {
+    font-size: 11px;
+  }
+  div.main .rp.home .info .h8, div.main .rp.home .info p, div.main .rp.home .info .trend, div.main .rp.home .info .trend .txt {
+    font-size: 0.85em;
+  }
 }
 @media only screen and (max-width: 600px){
   div.main .ct.home .img{
@@ -382,8 +416,7 @@ div.main .ct.home .stories hr{
   div.main .ct .hst{
     width: 140%;
   }
-}
-@media only screen and (max-width: 500px){
+  
   div.header .main{
     margin-bottom: 0px;
   }
@@ -394,7 +427,7 @@ div.main .ct.home .stories hr{
     width: 100%;
     padding: 0px;
     margin: 0px;
-    margin-top: -60px;
+    margin-top: -10px;
   }
   div.main .ct.home{
     width: 100%;
@@ -447,6 +480,22 @@ div.main .ct.home .stories hr{
     width: 100%;
     height: 100%;
   }
+  div.main .ct .hst-menu.hst-fixed{
+    position: fixed;
+    top: 75px;
+    width: 100%;
+  }
+  div.main .ct .hst-menu.hst-fixed .panel{
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 500px){
+  div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst {
+    width: 100%;
+  }
+  div.main .ct .hst-menu.hst-fixed {
+    top: 85px;
+  }
 }
 @media only screen and (max-width: 400px){
   div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst{
@@ -473,8 +522,7 @@ div.main .ct.home .stories hr{
     width: 50px;
   }
   div.main .ct .stories .sp table tr td img{
-  width: 40px;
-  height: 50px;
-}
-}
+    width: 40px;
+    height: 50px;
+  }
 }

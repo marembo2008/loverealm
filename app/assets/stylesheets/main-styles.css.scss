@@ -4,19 +4,37 @@
   src:font-url('TE114761.ttf');
   src:font-url('TE115761.ttf');
   src:font-url('TisaOT.otf');
-  src:font-url('TisaOT-Bold.otf');
-  src:font-url('TisaOT-BoldIta.otf');
-  src:font-url('TisaOT-Ita.otf');
   src:font-url('TisaOT-Medi.otf');
-  src:font-url('TisaOT-MediIta.otf');
-  src:font-url('TisaPro-Bold.otf');
-  src:font-url('TisaPro-BoldIta.otf');
-  src:font-url('TisaPro-Ita.otf');
   src:font-url('TisaPro-Medi.otf');
-  src:font-url('TisaPro-MediIta.otf');
   src:font-url('TisaPro-Regular.otf');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'FF Tisa';
+  src:font-url('TisaOT-Bold.otf');
+  src:font-url('TisaPro-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FF Tisa';
+  src:font-url('TisaOT-Ita.otf');
+  src:font-url('TisaOT-MediIta.otf');
+  src:font-url('TisaPro-Ita.otf');
+  src:font-url('TisaPro-MediIta.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'FF Tisa';
+  src:font-url('TisaOT-BoldIta.otf');
+  src:font-url('TisaPro-BoldIta.otf');
+  font-weight: bold;
+  font-style: italic;
 }
 
 html, body, div, span, a, input, select, section, label, option {
@@ -239,7 +257,10 @@ div.main .lp .mop{
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1024px){
+  div.main-bd {
+    margin-top: 50px;
+  }
   div.header .menu-hd {
     display: none;
   }
@@ -258,28 +279,28 @@ div.main .lp .mop{
     height: 20px;
     width: 70%;
   }
-div.main .ct{
-  width: 50%;
-  margin-left: 2%;
-}
+  div.main .ct{
+    width: 50%;
+    margin-left: 2%;
+  }
 
-div.main .ct .ds{
-  margin-top: 0px;
-}
-div.main .ct .ds input.search{
-  height: 20px;
-  font-size: 10px;
-  
-}
-div.main .ct .ds img{
-  top: 4px; 
-  right: 0px;
-}
-div.main .rp{
-  width: 15%;
-  float:right;
-  padding-top: 0px;
-}
+  div.main .ct .ds{
+    margin-top: 0px;
+    width: 90%;
+  }
+  div.main .ct .ds input.search{
+    height: 20px;
+    font-size: 10px;
+  }
+  div.main .ct .ds img{
+    top: 4px; 
+    right: 0px;
+  }
+  div.main .rp{
+    width: 15%;
+    float:right;
+    padding-top: 0px;
+  }
 div.main .rp .l-avatar{
   width: 20%;
   margin-right: 5%; 
@@ -304,13 +325,20 @@ div.main .rp .lj .line{
 }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
   div.main .rp{
     width: 20%;
   }
   div.main{
     position: relative;
     height: 100px;
+  }
+  
+  div.main.h-d{
+    width: 100%;
+    padding: 10px 1%;
+    height: 60px;
+    margin:0px;
   }
   
   div.main .lp{
@@ -323,10 +351,13 @@ div.main .rp .lj .line{
   div.main .ct{
     position: absolute;
     float: none;
-    top: 30px;
-    width: 100%;
+    top: 50px;
+    width: 98%;
     margin: 10px 0px;
     text-align: center;
+  }
+  div.main .ct .ds {
+    width: 97%;
   }
   div.main .rp .lj{
     display: none;
@@ -341,15 +372,29 @@ div.main .rp .lj .line{
   div.main .lp .mop{
     width: 10%;
     float: left;
+    height: 20px;
   }
   div.main .lp .logo{
-    width: 40%;
+    width: 38%;
     float: right;
     position: initial;
     margin-right: 8%;
+    height: 30px;
   }
   div.main .lp .lm{
     position: initial;
+  }
+}
+
+@media only screen and (max-width: 600px) and (min-width:  500px){
+  div.main .ct {
+    top: 60px;
+  }
+  div.main .lp .mop {
+    height: 30px;
+  }
+  div.main .lp .logo {
+    height: 40px;
   }
 }
 
