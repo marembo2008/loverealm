@@ -30,6 +30,12 @@ class User < ActiveRecord::Base
 
  has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "UserMessage"
  has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "UserMessage" 
+
+def lovescore
+@score_from_followers = 0
+@score = 0
+
+end
  
 def my_articles
 Post.find_by_user_id(self)
