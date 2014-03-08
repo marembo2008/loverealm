@@ -52,7 +52,7 @@ div.main .ct .hst-menu .panel{
   display: none;
 }
 div.main .ct .hst{
-  width: 95%;
+  width: 98%;
   background: #C8140F;
   height: 30px;
   padding: 5px 1%;
@@ -61,8 +61,8 @@ div.main .ct .hst{
 
 div.main .ct .hst-menu.hst-fixed{
   position: fixed;
-  top: 85px;
-  width: 52.8%;
+  top: 90px;
+  width: 50.3%;
 }
 
 div.main .ct .hst a{
@@ -111,22 +111,27 @@ div.main .ct .stories{
 div.main .ct.home .stories hr{
   width: 102%;
   margin-left: -1%;
+  border: 1px solid #f6f6f6;
+  border-bottom: 0px none;
 }
 
 div.main .ct.home .stories hr:last-child{
  display: none;
 }
 
+div.main .ct .stories .sp table tr td{
+}
 
 div.main .ct .stories .sp table tr td:first-child{
-  width: 124px;
+  width: 100px;
+  vertical-align: middle;
 }
 
 div.main .ct .stories .sp table tr td img{
-  width: 120px;
+  width: 100%;
   margin: 1px;
   border-radius: 100px;
-  height: 130px;
+  height: 100px;
 }
 
 div.main .ct .stories .sp .po a{
@@ -316,7 +321,7 @@ div.main .rp.home .info.flickr .r-blue{
   div.main .ct.home{
     margin-left: 0px;
     width: 64%;
-    margin-top: -5px;
+    margin-top: 5px;
   }
   div.main .rp.home {
     width: 35%;
@@ -328,16 +333,17 @@ div.main .rp.home .info.flickr .r-blue{
     height: 130px;
   }
   div.main .ct.home .img{
-    background-size: 97% 250px;
-    height: 250px;
+    background-size: 100% 110%;
+    height: 280px;
+    width: 97%;
   }
   div.main .ct .hst{
     height: 20px;
     width: 98%;
   }
   div.main .ct .hst a{
-    font-size: 11px;
-    padding: 4px 1.8%;
+    font-size: 9px;
+    padding: 4px 1%;
   }
   div.main .ct .hst a.more{
     background-position: 100% 7px;
@@ -346,11 +352,15 @@ div.main .rp.home .info.flickr .r-blue{
     padding-right: 3%;
   }
   div.main .ct .hst a.more span.icon-text{
-    font-size: 11px;
+    font-size: 8px;
+    padding: 1px 1%;
   }
+  div.main .ct .hst a.more span.icon {
+    background-position: -152px -61px;
+}
   div.main .ct .hst-menu.hst-fixed{
     position: fixed;
-    top: 31px;
+    top: 51px;
     width: 59.55%;
   }
   div.main .ct .stories .sp table tr td:first-child{
@@ -359,7 +369,7 @@ div.main .rp.home .info.flickr .r-blue{
 
   div.main .ct .stories .sp table tr td img{
     width: 80px;
-    height: 90px;
+    height: 80px;
   }
 
   div.main .ct .stories .sp table tr td h4{

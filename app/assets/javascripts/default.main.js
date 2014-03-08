@@ -5,6 +5,12 @@ $(document).ready(function() {
 		var wPos = $(window).scrollTop();
 		console.log('Window pos...' + wPos);
 		console.log('hst pos...' + hstPos_);
+		//header glow
+		if(wPos>10){
+			$('div.header').addClass('scroll-glow');
+		}else if(wPos<10){
+			$('div.header').removeClass('scroll-glow');	
+		}
 		if (wPos >= hstPos_) {
 			$('div.main .ct .hst-menu').addClass('hst-fixed');
 		} else {
