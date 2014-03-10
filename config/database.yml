@@ -5,7 +5,8 @@
 #   gem 'sqlite3'
 development:
   adapter: postgresql
-  username: marembo
+  username: postgres
+  host: localhost
   database: loverealm
   pool: 5
   timeout: 5000
