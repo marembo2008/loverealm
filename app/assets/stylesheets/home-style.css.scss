@@ -491,6 +491,9 @@ div.main .rp.home .info.flickr .r-blue{
   }
 }
 @media only screen and (max-width: 600px) and (min-width: 500px){
+  div.main .ct.home{
+    margin: 70px 0 0;
+  }
   div.main .ct .hst-menu .panel, div.main .ct .hst-menu .hst {
     width: 100%;
   }
