@@ -204,7 +204,7 @@ div.main .ct .ds{
 }
 div.main .ct .ds input.search{
   background: #fff;
-  border: 1px solid #C8140F;
+  border: 0.1em solid #C8140F;
   box-shadow: none;
   height: 30px;
   position: absolute;
@@ -215,6 +215,7 @@ div.main .ct .ds input.search{
   font-style: italic;
   color: #000;
   border-radius: 3px;
+  outline: none;
 }
 
 div.main .ct .ds div.hash-sep{
@@ -226,8 +227,9 @@ div.main .ct .ds div.hash-sep{
   height:30px;
 }
 
-div.main .ct .ds input.search:hover{
-  box-shadow: 0 0 6px 0.001em #C8140F;
+div.main .ct .ds input.search:hover, div.main .ct .ds input.search:focus{
+  box-shadow: 0 0 9px 0.005em rgba(200, 20, 15, 0.5);
+  border: 0.1em solid #C8140F;
 }
 
 div.main .ct .ds img{
@@ -359,10 +361,10 @@ div.main .ct .ds div.hash-sep {
   }
   
   div.main.h-d{
-    width: 100%;
+    width: 94%;
     padding: 10px 1%;
     height: 80px;
-    margin:0px;
+    margin:0px 3%;
   }
   
   div.main .lp{
