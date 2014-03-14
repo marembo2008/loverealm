@@ -1,19 +1,18 @@
 class PostsController < ApplicationController
+  def trending
 
-def trending
+  end
 
-end
+  def show
 
-def show
+  end
 
-end
+  def create
+    @article = current_user.posts.build(params[:article])
+    puts "article posted"
+  end
 
-def create
-@article = current_user.posts.build(params[:article])
-puts "article posted"
-end
-
-def destroy
-end
+  def destroy
+  end
 
 end

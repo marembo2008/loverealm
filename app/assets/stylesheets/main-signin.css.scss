@@ -1,0 +1,180 @@
+div.main .rp .signin{
+  background: #fff;
+  border: 1px solid #e8e8ef;
+  width: 406px;
+  height: 300px;
+  position: absolute;
+  top: 55px;
+  right: -5px;
+  display: none;
+}
+
+div.main .rp .signin.active-signin{
+  display: block;
+}
+
+div.signin .input{
+  width: 100%;
+  background: transparent;
+  position: relative;
+}
+
+div.signin span.trn{
+  width: 0;
+  height: 0;
+  display: inline-block;
+  content: "&darr;";
+  text-indent: -99999px;
+  vertical-align: top;
+  margin-top: -8px;
+  margin-right: 95px;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid #fff;
+  opacity: 1;
+}
+
+
+div.signin .input input[type="text"], div.signin .input input[type="password"]{
+  width: 86%;
+  margin: 10px 4%;
+  padding: 5px 3%;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bolder;  
+  border: 1px solid rgba(244, 242, 248, 1);
+  box-shadow: 0 0 1px 1px rgba(244, 242, 248, 1);
+}
+
+div.signin .input input:focus{
+  outline: none;
+  box-shadow: 0 0 9px 0.005em rgba(200, 20, 15, 0.5);
+  border: 1px solid rgba(200, 20, 15, 0.5);
+}
+
+div.signin .input .xxx{
+  position: absolute;
+  right: 6%;
+  top: 15px;
+  background-image: url(image_path('icon_cancel.png'));
+  background-size: 90% 90%;
+  background-position: 2px;
+  background-repeat: no-repeat;
+  background-color: #f4f2f8;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+div.signin .input .xxx.password{
+  top: 78px;
+}
+
+div.signin .input input.lg-btn{
+  padding: 5px 1.5% 9px 1.5%;
+  background: #bbb;
+  color: white;
+  width: 30%;
+  margin: 20px 33%;
+  border-radius: 1px;
+  font-weight: normal;
+  text-shadow: none;
+  box-shadow: none;
+  border: 0px none;
+  cursor: pointer;
+}
+
+hr.signin-sep{
+  border-top: 0px none;
+  border-bottom: 1px solid #e4e2e8;
+  width: 90%;
+  margin: auto 5%;
+}
+
+div.signin .input .remember-me{
+  position: absolute;
+  top: 175px;
+  width: 50%;
+  height: 40px;
+  margin: auto 25%;
+  padding-left: 5px;
+  background-color: #fff;
+}
+
+div.signin .input .remember-me .inner{
+  width: 100%;
+  position: relative;
+}
+
+div.signin .input .remember-me input[type="checkbox"]{
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border: 2px solid #dedede;
+  background-color: #fff;
+  -webkit-appearance: text;
+}
+
+div.signin .input .remember-me span{
+  display: inline-block;
+  position: absolute;
+  top: 11px;
+  left: 30px;
+}
+
+div.signin .input .login-social{
+  width: 90%;
+  margin: auto 5%;
+}
+
+div.signin .input .login-social span, div.signin .input .login-social a, div.signin .input .login-social div{
+  float: left;
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+div.signin .input .login-social a{
+  width: 16px;
+  height: 16px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-top: 2px;
+}
+
+div.signin .input .login-social div.sep{
+  height: 14px;
+  width: 1px;
+  background-color: #bbb;
+  margin-top: 4px;
+}
+
+div.signin .input .login-social a.social-fb{
+   background-image: url(image_path('f.jpg'));
+}
+
+div.signin .input .login-social a.social-tw{
+   background-image: url(image_path('t.jpg'));
+}
+
+div.signin .input .login-social a.social-gp{
+   background-image: url(image_path('l.jpg'));
+}
+
+div.signin .input .join{
+  width: 88%;
+  margin: auto 5%;
+  text-align: left;
+  margin-left: 7%;
+}
+
+div.signin .input .join a{
+  text-decoration: none;
+  color: #C8140F;
+  font-weight: bold;
+}

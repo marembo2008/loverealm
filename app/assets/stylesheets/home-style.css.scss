@@ -79,17 +79,25 @@ div.main .ct .hst a, div.main .ct .hst a.more span.icon-text{
   color: #FF8888;
 }
 
-div.main .ct .hst a.more span.icon-text, div.main .ct .hst a.more span.icon{
-  float: left;
-}
+// div.main .ct .hst a.more span.icon-text, div.main .ct .hst a.more span.icon{
+  // float: left;
+// }
 div.main .ct .hst a.more span.icon{
-  background-image: url(image_path('more-buttons.png'));
-  background-repeat: no-repeat;
-  background-position: -42px 0;
-  height: 8px;
-  width: 10px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  content: "&darr;";
+  text-indent: -99999px;
+  vertical-align: top;
   margin-top: 8px;
-  margin-left: 3px;
+  margin-left: 4px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #f5f5f5;
+  filter: alpha(opacity=50);
+  -khtml-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
 }
 
 div.main .ct .hst a.selected{
@@ -359,9 +367,14 @@ div.main .rp.home .info.flickr .r-blue{
     padding: 1px 1%;
   }
   div.main .ct .hst a.more span.icon {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #f5f5f5;
+    margin-top: 7px;
+    margin-left: 3px;
+    right: 0px;
     position: absolute;
-    top: 0px;
-    right: 3px;
+    top: 4px;
   }
   div.main .ct .hst-menu.hst-fixed{
     position: fixed;

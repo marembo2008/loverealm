@@ -17,4 +17,14 @@ $(document).ready(function() {
 			$('div.main .ct .hst-menu').removeClass('hst-fixed');
 		}
 	});
+	
+	$('div.main .rp .lj a[type="login"]').hover(function(){
+		$('div.main .rp .signin').addClass('active-signin');
+	});
+	
+	$('div.main .rp .lj a[type="login"]').click(function(){
+		$('div.main .rp .signin').addClass('active-signin');
+		console.log('cliked login................');
+		return false;
+	});
 });

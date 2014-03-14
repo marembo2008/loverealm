@@ -196,6 +196,7 @@ div.main .ct{
 div.main .rp{
   width: 31%;
   padding-top: 12px;
+  position: relative;
 }
 div.main .ct .ds{
   position: relative;
@@ -247,6 +248,10 @@ div.main .rp .l-avatar{
   float: right;
   margin-right: 5px;
   margin-top: 2px;
+}
+
+div.main .rp .l-avatar img{
+  cursor: pointer;
 }
 
 div.main .rp .lj a, div.main .rp .lj .line{
