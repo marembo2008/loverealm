@@ -1,6 +1,6 @@
 class Likearticle < ActiveRecord::Base
 
-attr_accessible :article_id, :user_id, :count
+  attr_accessor :article_id, :user_id, :count
   belongs_to :user, :class_name => "User"
   belongs_to :post, :class_name => "Post"
 

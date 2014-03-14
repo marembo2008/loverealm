@@ -5,16 +5,16 @@ class Authorization < ActiveRecord::Base
       authorization.uid = auth.uid
       authorization.oauth_token = auth.credentials.token
       authorization.oauth_expires_at = Time.at(auth.credentials.expires_at)
-#create a user for this authorization.
+      #create a user for this authorization.
       dummy_email = "everyone@dummy.com"
       @user = User.new(:fname => auth.info.name, :email => dummy_email)
-	is_saved = false
- 	is_saved = @user.save
-	if is_saved
-	puts "New user created #{@user.id}"
-	authorization.uid = @user.id
-	end
-	
+      is_saved = false
+      is_saved = @user.save
+      if is_saved
+        puts "New user created #{@user.id}"
+      authorization.uid = @user.id
+      end
+
       authorization.save!
     end
   end

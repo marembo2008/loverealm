@@ -3,7 +3,6 @@ class User < ActiveRecord::Base
                   :password,  :password_confirmation,:avatar,
                   :validated, :validation_code,
                   :emailsecret, :secretcode
-  
 
   #mount_uploader :avatar, AvatarUploader
   before_save do |user|
@@ -26,45 +25,44 @@ class User < ActiveRecord::Base
 
   has_many :notifications, ->{order(updated_at: :desc)}, :foreign_key => "user_id", :dependent => :destroy
 
- has_many :status_updates, -> {order(updated_at: :desc)}, :dependent => :destroy, :foreign_key => "uid"
+  has_many :status_updates, -> {order(updated_at: :desc)}, :dependent => :destroy, :foreign_key => "uid"
 
- has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "UserMessage"
- has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "UserMessage" 
+  has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "UserMessage"
+  has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "UserMessage"
 
-def lovescore
-@score_from_followers = 0
-@score = 0
+  def lovescore
+    @score_from_followers = 0
+    @score = 0
 
-end
- 
-def my_articles
-Post.find_by_user_id(self)
-end
+  end
 
-def feed
-   Post.from_users_followed_by(self)
-end
+  def my_articles
+    Post.find_by_user_id(self)
+  end
 
-   def  update_status(new_status_description)
-      @user = current_user
-      @status = status_update.create(:description => new_status_description, :uid => @user.id)
-   end
+  def feed
+    Post.from_users_followed_by(self)
+  end
+
+  def  update_status(new_status_description)
+    @user = current_user
+    @status = status_update.create(:description => new_status_description, :uid => @user.id)
+  end
 
   def following?(other_user)
     relationships.find_by_followed_id(other_user.id)
   end
 
-def like(article_id)    
-      likearticle.create(:article_id => article_id, :user_id => self)
+  def like(article_id)
+    likearticle.create(:article_id => article_id, :user_id => self)
   end
 
-def follow!(other_user)
+  def follow!(other_user)
     relationships.create!(:followed_id => other_user.id)
   end
 
   def unfollow(other_user)
     relationships.find_by_followed_id(other_user.id).destroy
   end
-
 
 end
