@@ -18,13 +18,35 @@ $(document).ready(function() {
 		}
 	});
 	
-	$('div.main .rp .lj a[type="login"]').hover(function(){
+	$('div.main .rp .l-avatar img, div.main .rp .lj a[type="login"]').hover(function(){
 		$('div.main .rp .signin').addClass('active-signin');
 	});
 	
-	$('div.main .rp .lj a[type="login"]').click(function(){
+	$('div.main .rp .l-avatar img, div.main .rp .lj a[type="login"]').click(function(){
 		$('div.main .rp .signin').addClass('active-signin');
 		console.log('cliked login................');
 		return false;
 	});
+	
+	//login boxes
+	$('div.signin .input .xxx.email').click(function(){
+		$('div.signin .input input[type="text"]').val('');
+	});
+	$('div.signin .input .xxx.password').click(function(){
+		$('div.signin .input input[type="password"]').val('');
+	});
+	
+	$('div.signin .input input[type="password"]').keypress(function(e) {
+      var is_shift_pressed = false;
+      if (e.shiftKey) {
+        is_shift_pressed = e.shiftKey;
+      } else if (e.modifiers) {
+        is_shift_pressed = !!(e.modifiers & 4);
+      }
+      if (((e.which >= 65 && e.which <=  90) && !is_shift_pressed) || ((e.which >= 97 && e.which <= 122) && is_shift_pressed)) {
+        $("div.signin .input .capslock").show();    
+      } else {
+        $("div.signin .input .capslock").hide();  
+      }
+ });
 });

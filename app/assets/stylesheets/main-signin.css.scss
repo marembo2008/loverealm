@@ -6,7 +6,7 @@ div.main .rp .signin{
   position: absolute;
   top: 55px;
   right: -5px;
-  display: none;
+  // display: none;
 }
 
 div.main .rp .signin.active-signin{
@@ -36,14 +36,20 @@ div.signin span.trn{
 
 
 div.signin .input input[type="text"], div.signin .input input[type="password"]{
-  width: 86%;
+  width: 79%;
   margin: 10px 4%;
   padding: 5px 3%;
+  padding-right: 10%;
   border-radius: 30px;
   font-size: 20px;
   font-weight: bolder;  
   border: 1px solid rgba(244, 242, 248, 1);
   box-shadow: 0 0 1px 1px rgba(244, 242, 248, 1);
+}
+
+div.signin .input input[type="password"]{
+  width: 60%;
+  padding-right: 29%;
 }
 
 div.signin .input input:focus{
@@ -65,6 +71,14 @@ div.signin .input .xxx{
   width: 30px;
   height: 30px;
   cursor: pointer;
+}
+
+div.signin .input .capslock{
+  position: absolute;
+  top: 85px;
+  right: 60px;
+  color: #ff0000;
+  display: none;
 }
 
 div.signin .input .xxx.password{
@@ -177,4 +191,14 @@ div.signin .input .join a{
   text-decoration: none;
   color: #C8140F;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1025px){
+  div.main .rp .signin{
+    top: 38px;
+  }
+  
+  div.signin span.trn{
+    margin-right: 112px;
+  }
 }
