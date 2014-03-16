@@ -13,6 +13,8 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   match '/signin', :to => 'main#signin', via: [:get,:post]
   match '/details', :to => 'main#user_details', via: [:get,:post]
 
+  resources :sessions, :only => [:new, :create, :destroy]
+
   resources :users, :constraints => {:id=> /[^\/]+/} do
     member do
       get :following, :followers, :feed, :notifications

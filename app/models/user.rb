@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+  has_secure_password
 #mount_uploader :avatar, AvatarUploader
   before_save do |user|
  #   require 'digest/md5'

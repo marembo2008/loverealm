@@ -7,6 +7,7 @@ gem 'rails', '4.0.2'
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'bcrypt-ruby', '~> 3.1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
