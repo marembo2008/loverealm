@@ -11,6 +11,22 @@ match 'auth/failure', to: redirect('/'), via: [:get, :post]
 match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   match '/signin', :to => 'main#signin', via: [:get,:post]
+  match '/details', :to => 'main#user_details', via: [:get,:post]
+
+  resources :users, :constraints => {:id=> /[^\/]+/} do
+    member do
+      get :following, :followers, :feed, :notifications
+    end
+    collection do
+	get 'sendsecretcode'
+	get 'loginsecretcode'
+      get 'validateemail'
+      get 'search'
+      get 'test'
+      get 'readnotifications'
+    end
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

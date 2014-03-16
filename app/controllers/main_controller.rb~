@@ -2,4 +2,7 @@ class MainController < ApplicationController
   def home
 
   end
+  def signin
+@user = User.new
+  end
 end
