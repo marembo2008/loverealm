@@ -1,0 +1,21 @@
+div#info-message-panel{
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background: #5578ff;
+  color: #fff;
+  font-size: 14px;
+  font-style: italic;
+  width: 35%;
+  padding: 5px 1%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+}
+
+div#info-message-panel span#info-message{
+  text-align: center;
+  color: #fff;
+}

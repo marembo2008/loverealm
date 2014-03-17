@@ -10,6 +10,12 @@
 		</script>
 	</head>
 	<body>
+		<div id="loading-indicator">
+			<%= image_tag(image_path('ajax_loading.gif'))%>
+		</div>
+		<div id="info-message-panel">
+			<span id="info-message"></span>
+		</div>
 		<div class="header">
 			<div class="menu-hd">
 				<div class="menu">
@@ -47,13 +53,14 @@
 					<div class="lj">
 						<a href="#" type="login">Login</a>
 						<div class="line"></div>
-						<a href="#">Join</a>
+						<a href="#" type="register">Join</a>
 						<div class="clear"></div>
 					</div>
 					<div class="l-avatar">
 						<%= image_tag(image_path('login.png'))%>
 					</div>
 					<%= render "layouts/signin" %>
+					<%= render "users/register" %>
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>

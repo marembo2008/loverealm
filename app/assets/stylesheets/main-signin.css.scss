@@ -1,3 +1,16 @@
+#loading-indicator{
+  cursor: wait;
+  position: fixed;
+  top: 0px;
+  left: 40%;
+  width: 20%; 
+  z-index: 1000;
+}
+
+#loading-indicator img{
+  width: 100%;
+}
+
 div.main .rp .signin{
   background: #fff;
   border: 1px solid #e8e8ef;
@@ -6,7 +19,11 @@ div.main .rp .signin{
   position: absolute;
   top: 55px;
   right: -5px;
-  // display: none;
+  display: none;
+}
+
+div.main .rp .signin.register{
+  height: 335px;
 }
 
 div.main .rp .signin.active-signin{
@@ -85,6 +102,10 @@ div.signin .input .xxx.password{
   top: 78px;
 }
 
+div.signin .input .xxx.confirm-password{
+  top: 140px;
+}
+
 div.signin .input input.lg-btn{
   padding: 5px 1.5% 9px 1.5%;
   background: #bbb;
@@ -144,6 +165,16 @@ div.signin .input .remember-me span{
 div.signin .input .login-social{
   width: 90%;
   margin: auto 5%;
+}
+
+div.main .rp .signin.register .login-social{
+  width: 75%;
+  margin: auto;
+}
+
+div.main .rp .signin.register .login-social span{
+  font-size: 16px;
+  font-weight: normal;
 }
 
 div.signin .input .login-social span, div.signin .input .login-social a, div.signin .input .login-social div{

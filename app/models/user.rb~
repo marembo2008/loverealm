@@ -1,15 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessor :fname,:lname, :country, :birthday, :email,
-                  :password,  :password_confirmation,:avatar,
-                  :validated, :validation_code,
-                  :emailsecret, :secretcode
-  
 
-  #mount_uploader :avatar, AvatarUploader
+#mount_uploader :avatar, AvatarUploader
   before_save do |user|
-    require 'digest/md5'
-    user.email = email.downcase
-    user.emailsecret =  Digest::MD5.hexdigest(user.email)
+ #   require 'digest/md5'
+ #   user.email = email.downcase
+   # user.emailsecret =  Digest::MD5.hexdigest(user.email)
   end
 
   has_many :authorizations
@@ -30,6 +25,12 @@ class User < ActiveRecord::Base
 
  has_many :inbox_messages, ->{order(updated_at: :desc)}, :foreign_key => "recipient_id", :class_name => "UserMessage"
  has_many :outbox_messages, -> {order(updated_at: :desc)} , :foreign_key => "sender_id", :class_name => "UserMessage" 
+
+def lovescore
+@score_from_followers = 0
+@score = 0
+
+end
  
 def my_articles
 Post.find_by_user_id(self)

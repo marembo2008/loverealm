@@ -1,0 +1,7 @@
+$('span#info-message').html("<%= @message%>");
+jQuery('div#info-message-panel').show();
+setTimeout(function(){
+  jQuery('div#info-message-panel').hide();
+  $('div.main .rp .signin').removeClass('active-signin'); //remove the login/registration panel
+}, 10000);
+

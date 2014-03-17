@@ -1,8 +1,40 @@
 <div id = "user-widget">
+<<<<<<< HEAD
 	Hi
 	<% if current_user %>
 	current_user.name
 	<%else %>
 	<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
 	<% end %>
+=======
+Hi 
+<% if current_user %>
+current_user.name
+<%else %>
+<%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+</br>
+</br>
+<div>
+Sign in </br>
+<%= form_for(:session, :url => sessions_path, :remote => true) do |f| %>
+<%=f.text_field :email %>
+<%= f.password_field :password %>
+<%= f.submit("Sign In") %>
+<% end %>
+</br>
+</div>
+
+
+<div>
+Sign up here </br>
+<%= form_for(@user, :remote => true) do |f| %>
+ <%= f.text_field :email %>
+<%= f.password_field :password %>
+<%= f.password_field :password_confirmation %>
+<%= f.submit("Sign Up") %>
+<% end %>
+</br>
+</div>
+<% end %>
+>>>>>>> 8b0aae44d648f678e71149d9599b9e5e6ec46d9b
 </div>
