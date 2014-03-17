@@ -1,0 +1,10 @@
+Create a new Article Here
+</br>
+
+<%= form_for(@article) do |f| %>
+Title <%= f.text_field :title%> 
+</br>
+Subtitle: <%= f.text_field :subtitle %>
+</br> Content: <%= f.text_field :content %>
+</br> <%= f.submit("Post")%>
+<% end %>

@@ -1,0 +1,6 @@
+Welcome <%=@user.fname%>
+</br>
+inbox <%=@user.inbox_messages.count%>
+</br>
+Articles <%= @user.posts.count %>
+</br> notifications <%=@user.notifications.count%>

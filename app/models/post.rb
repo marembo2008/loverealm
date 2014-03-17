@@ -1,9 +1,9 @@
 class Post < ActiveRecord::Base
-attr_accessible :title, :image, :subtitle, :content, :is_draft, :url
+#attr_accessor :title, :image, :subtitle, :content, :is_draft, :url
 belongs_to :user
 validates :user_id, :presence => true
- validates :description, :presence => true
-  default_scope :order => 'gnibs.created_at DESC'
+ validates :content, :presence => true
+  default_scope ->{order(created_at: :desc)}
 
   has_many :likearticles, :foreign_key => "article_id"
   has_many :notifications, :foreign_key => "article_id"
