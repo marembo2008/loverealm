@@ -1,1 +1,43 @@
-hey there <%= current_user.email%>
+<div class="ct profile">
+	<div class="acc-info-pn">
+		<div class="acc-info">
+			<%= image_tag(image_path('account-pic.jpg'), class: "pp")%>
+			<a href="#" class="ecp">Edit Cover Photo</a>
+			<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+		<br />
+		<br />
+		<br />
+		<div class="g-info">
+			<span>Yaw Ansong</span>
+		</div>
+		<div class="bio">
+			<span>CEO of Loverealm.org network</span>
+			<br/>
+			<span>Registered on 8th January, 2014</span>
+			<br/>
+			<span class="love-score">Love Score: 1000 <a href="#" class="more-info">?</a></span>
+			<br/>
+			<span>Ranking: <span class="ranking">8th most loved person</span></span>
+			<br/>
+			<br/>
+			<a href="#" class="inc-ranking">Increase your ranking</a>
+		</div>
+		<br/>
+	</div>
+	<div class="dh">
+		<div class="dheader">
+			<a href="#">My Content</a>
+			<a href="#">People I love</a>
+			<a href="#">My stored posts</a>
+			<a href="#" class="active-option">Inbox</a>
+			<a href="#">Notifications</a>
+			<a href="#">Preferences</a>
+		</div>
+		<div class="dcontent">
+			<%= render "users/dashboard/inbox"%>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

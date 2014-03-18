@@ -2,13 +2,15 @@ div.main .rp .signin[type="myaccount"]{
   width: 350px;
   padding: 25px;
   padding-top: 0px;
-  height: 220px;
+  height: 210px;
+  border-bottom: 2px solid #e8e8ef
 }
 
 div.p-info{
   float: left;
   width: 200px;
   position: relative;
+  margin-left: 20px;
 }
 
 div.p-info .dt{
@@ -38,5 +40,157 @@ div.signin .input input.lg-btn.sign-out{
   font-weight: bold;
   font-size: 18px;
   padding: 2px;
-  margin: 0px;
+  width: 30%;
+  margin: 5px 35% auto 35%;
 }
+div.acc-opt{
+  text-align: center;
+  margin-top: 12px;
+}
+div.acc-opt a{
+  text-decoration: none;
+  padding: 0px 20px;
+  border-left: 1px solid #9f9f9f;
+}
+
+div.acc-opt a:first-child{
+  border-left: 0px none;
+}
+
+div.main .ct.profile{
+  width: 84%;
+  background: #fff;
+  border: 1px solid #d4d2d8;
+  margin-left: 1%;
+}
+
+div.main .ct.profile .acc-info-pn{
+  width: 25%;
+  border-right: 2px solid #e8e8ef;
+  float: left;
+}
+
+div.main .ct.profile .acc-info{
+  width: 100%;
+  height: 320px;
+  position: relative;
+  background-image: url(image_path("SweetBrothers.jpg"));
+  background-position: 20% 20%;
+  background-size: 160% 100%;
+}
+
+div.main .ct.profile .acc-info img.pp{
+  width: 100px;
+  height: 100px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 93px;
+  top: 270px;
+}
+
+div.main .ct.profile .acc-info .ecp{
+  position: absolute;
+  right: -2px;
+  background: #fff;
+  color: #000;
+  top: 10px;
+  padding: 5px 5px;
+  font-size: 12px;
+}
+
+div.main .ct.profile .acc-info-pn .g-info{
+  width: 100%;
+  text-align: center;
+}
+
+div.main .ct.profile .acc-info-pn .g-info span{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+div.main .ct.profile .acc-info-pn .bio{
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+div.main .ct.profile .acc-info-pn .bio span{
+  font-size: 12px;
+}
+
+
+div.main .ct.profile .acc-info-pn .bio span.love-score{
+  position: relative;
+  display: block;
+  width: 60%;
+}
+
+div.main .ct.profile .acc-info-pn .bio .more-info{
+  display: inline-block;
+  width: 13px;
+  padding-bottom: 2px;
+  padding-top: 0px;
+  font-size: 11px;
+  font-weight: bold;
+  height: 11px;
+  background: #000;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  text-align: center;
+}
+
+div.main .ct.profile .acc-info-pn .bio .ranking, div.main .ct.profile .acc-info-pn .bio .inc-ranking{
+  color: #C8140F;
+}
+
+div.main .ct.profile .dh{
+  width: 68%;
+  padding: 30px 2.5%; 
+  float: left;
+}
+
+div.main .ct.profile .dh .dheader{
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  padding-left: 0px;
+}
+
+div.main .ct.profile .dh .dheader a{
+  color: #888;  
+  text-decoration: none;
+  font-size: 16px;
+  margin: auto 18px;
+}
+
+div.main .ct.profile .dh .dheader a:first-child{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+div.main .ct.profile .dh .dheader a.active-option{
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+
+div.main .ct.profile .dh .dcontent{
+  width: 94%;
+  margin: 10px 3%;
+}
+
+div.main .ct.profile .dh .dcontent .inbox{
+  width: 100%;
+  
+}
+
+div.main .ct.profile .dh .dcontent .inbox a{
+  text-decoration: none;
+  color: #C8140F;
+  font-weight: 300;
+  
+}
+

@@ -1,12 +1,13 @@
+<%= form_for(:session, url: sessions_path, remote: true) do |f| %>
 <div class="signin" type="signin">
 	<span class="trn"></span>
 	<div class="input">
-		<input type="text" placeholder="Email" />
-		<input type="password" placeholder="Password" />
+		<%= f.text_field :email, placeholder: "Email"%>
+		<%= f.password_field :password, placeholder: "Password"%>
 		<div class="xxx email"></div>
 		<div class="xxx password"></div>
 		<div class="capslock">CAPS ON</div>
-		<input type="submit" class="lg-btn" value="Login" />
+		<%= f.submit class: "lg-btn", value: "Login"%>
 		<hr class="signin-sep" />
 		<div class="remember-me">
 			<div class="inner">
@@ -31,3 +32,4 @@
 		</div>
 	</div>
 </div>
+<% end %>

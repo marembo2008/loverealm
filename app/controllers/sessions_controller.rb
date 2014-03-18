@@ -11,9 +11,13 @@ class SessionsController <  ApplicationController
   end
 
   def create
+    @message = '';
     if signed_in?
       #redirect_to "/users/#{current_user.html_safe_username}/feed"
-      puts "Already signed in"
+      @message= "Already signed in"
+      respond_to do |format|
+        format.js {render "info/message"}
+      end
       return
     end
     auth = request.env['omniauth.auth']
@@ -28,17 +32,15 @@ class SessionsController <  ApplicationController
     else
       #sign in normally via email/password
       user = User.find_by_email(params[:session][:email])
-	    message = ""
       if user &&  user.authenticate(params[:session][:password]) #user.validated &&
         sign_in(user)
-        puts "signed in user: #{user.email}"
+        @message= "#{user.fullname} you have successfully signed, please wait...."
       else
-	      puts "signin failed"
-	      message = "fail"
+	      @message = "signed in fail"
       end
 	    respond_to do |format|
-	      format.js {render :json => message.to_json}
-	   end
+        format.js {render "info/signed_in_message"}
+      end
     end
   end
 

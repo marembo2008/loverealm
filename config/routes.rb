@@ -42,6 +42,7 @@ Loverealm::Application.routes.draw do
       get 'search'
       get 'test'
       get 'readnotifications'
+      get 'sign_out'
     end
   end
 

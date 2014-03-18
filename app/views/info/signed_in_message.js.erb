@@ -1,0 +1,10 @@
+$('span#info-message').html("<%= @message%>");
+jQuery('div#info-message-panel').show();
+$('body').css('cursor', 'wait');
+setTimeout(function(){
+  jQuery('div#info-message-panel').hide();
+  $('div.main .rp .signin').removeClass('active-signin'); //remove the login/registration panel
+  //redirect to current user dashboard.
+  document.location = '/users/<%=current_user.email%>/dashboard';
+}, 5000);
+

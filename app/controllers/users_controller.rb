@@ -9,6 +9,11 @@ class UsersController < ApplicationController
   
   def index
   end
+  
+  def sign_out
+    signout();
+    redirect_to "/"
+  end
 
   def show
      @user = User.find(params[:id])

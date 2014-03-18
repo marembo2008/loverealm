@@ -5,7 +5,7 @@
 			<%= image_tag(image_path('account-pic.jpg'))%>
 			<div class="p-info">
 				<div class="dt">
-					<span class="name">Marembo Ochieng</span>
+					<span class="name">Yaw Ansong</span>
 					<br/>
 					<span>Joined on 8th January, 2014</span>
 					<br/>
@@ -16,15 +16,15 @@
 		</div>
 		<hr class="signin-sep" />
 		<div class="acc-opt">
-			<a href="#">My Account</a>
+			<a href="/users/<%=current_user.email%>/dashboard">My Account</a>
 			<a href="#">Notifications</a>
 			<a href="#">Inbox</a>
 			<div class="clear"></div>
 		</div>
 		<br/>
 		<hr class="signin-sep" />
-		<div style="display: table-cell; width: 100%">
-			<input type="submit" class="lg-btn sign-out" value="Sign Out"/>
-		</div>
+		<%= form_tag("/signout", method: "get") do %>
+		<%= submit_tag("Sign Out", class: "lg-btn sign-out")%>
+		<% end %>
 	</div>
 </div>

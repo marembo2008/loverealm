@@ -50,9 +50,6 @@ div.signin span.trn{
   border-bottom: 12px solid #fff;
   opacity: 1;
 }
-div.main .rp .signin[type="myaccount"]{
-  display: block;
-}
 div.main .rp .signin[type="myaccount"] .l-avatar{
   float: none;
   width: auto;
@@ -69,7 +66,6 @@ div.main .rp .signin[type="myaccount"] .l-avatar img{
 div.main .rp .signin[type="myaccount"] span.trn{
   margin-right: 188px;
 }
-
 
 div.signin .input input[type="text"], div.signin .input input[type="password"]{
   width: 79%;
