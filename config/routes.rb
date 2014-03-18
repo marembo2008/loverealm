@@ -15,8 +15,7 @@ Loverealm::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
 
-
-   resources :posts, :constraints => {:id=> /[^\/]+/}  do
+  resources :posts, :constraints => {:id=> /[^\/]+/}  do
     member do
       get :retcomment, :comment, :artilepicks, :articlestream, :upvotecomment
     end
@@ -33,12 +32,8 @@ Loverealm::Application.routes.draw do
 
   resources :users, :constraints => {:id=> /[^\/]+/} do
     member do
-<<<<<<< HEAD
       get :following, :followers, :feed, :notifications, :dashboard
       post :create
-=======
-      get :following, :followers, :feed, :notifications, :show
->>>>>>> 57c5dda610eb66b9204fa66657a8bff9646b2ebe
     end
     collection do
       get 'sendsecretcode'
