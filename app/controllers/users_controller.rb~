@@ -9,6 +9,23 @@ include SessionsHelper
   def index
   end
 
+  def show
+   #inbox, notifications, lovescore
+  end
+
+  def edit
+  @user = current_user
+  end
+
+  def update
+      if @user.update(user_params)
+puts "update success"
+      else
+      puts "update failed"
+      end
+redirect_to "/details"
+  end
+
   def feed
       @articles = @user.feed
    end
@@ -64,14 +81,14 @@ puts "User has verified"
 else
 puts "FAILED -- verification"
     end
-    redirect_to "/signin" #update details page
+    redirect_to "/details" #update details page
   end
 
 
 private
 
  def user_params
-    params.require(:user).permit(:email,:password,:password_confirmation, :validated, :validation_code)
+    params.require(:user).permit(:email,:password,:password_confirmation, :validated, :validation_code, :fname, :lname)
  end
 
   def correct_user

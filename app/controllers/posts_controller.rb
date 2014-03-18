@@ -7,12 +7,25 @@ class PostsController < ApplicationController
 
   end
 
-  def create
-    @article = current_user.posts.build(params[:article])
-    puts "article posted"
+  def destroy
   end
 
-  def destroy
+  def new
+    @article = Post.new
+  end
+
+  def create
+    @article = current_user.posts.build(article_params)
+    if @article.save
+      puts "article posted"
+    else
+      puts "article NOT saved"
+    end
+    redirect_to "/"
+  end
+
+  def article_params
+    params.require(:post).permit(:title,:subtitle,:content)
   end
 
 end

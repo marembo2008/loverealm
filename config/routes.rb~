@@ -13,9 +13,28 @@ match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   match '/signin', :to => 'main#signin', via: [:get,:post]
   match '/details', :to => 'main#user_details', via: [:get,:post]
 
+  resources :sessions, :only => [:new, :create, :destroy]
+
+
+  resources :sessions, :only => [:new, :create, :destroy]
+  resources :posts, :constraints => {:id=> /[^\/]+/}  do
+    member do
+      get :retcomment, :comment, :artilepicks, :articlestream, :upvotecomment
+    end
+    collection do
+      get 'search'
+      get 'comment'
+      get 'reportarticle'
+      get 'retcomment'
+      get 'test'
+      get 'upvotearticle'
+      get 'display'
+    end
+  end
+
   resources :users, :constraints => {:id=> /[^\/]+/} do
     member do
-      get :following, :followers, :feed, :notifications
+      get :following, :followers, :feed, :notifications, :show
     end
     collection do
 	get 'sendsecretcode'

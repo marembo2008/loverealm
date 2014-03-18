@@ -1,11 +1,28 @@
 class PostsController < ApplicationController
 
+def trending
+
+end
+
+def show
+
+end
+
+def new
+@article = Post.new
+end
+
 def create
-@article = current_user.posts.build(params[:article])
+@article = current_user.posts.build(article_params)
 puts "article posted"
+redirect_to "/"
 end
 
 def destroy
+end
+
+def article_params
+  params.require(:post).permit(:title,:subtitle,:content)
 end
 
 end

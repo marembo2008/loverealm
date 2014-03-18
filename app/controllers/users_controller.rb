@@ -10,6 +10,24 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+     @user = User.find(params[:id])
+   #inbox, notifications, lovescore
+  end
+
+  def edit
+  @user = current_user
+  end
+
+  def update
+      if @user.update(user_params)
+puts "update success"
+      else
+      puts "update failed"
+      end
+redirect_to "/details"
+  end
+
   def feed
     @articles = @user.feed
   end
@@ -76,7 +94,7 @@ class UsersController < ApplicationController
 private
 
  def user_params
-    params.require(:user).permit(:email,:password,:password_confirmation, :validated, :validation_code)
+    params.require(:user).permit(:email,:password,:password_confirmation, :validated, :validation_code, :fname, :lname)
  end
 
   def correct_user
