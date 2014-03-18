@@ -13,8 +13,9 @@ $(function() {
 
 $(document).ready(function() {
 	var hstPos = $('div.main .ct .hst-menu').position();
-	var hstPos_ = hstPos.top - 80;
-	$(window).scroll(function() {
+	if(hstPos){
+	  var hstPos_ = hstPos.top - 80;
+	  $(window).scroll(function() {
 		var wPos = $(window).scrollTop();
 		console.log('Window pos...' + wPos);
 		console.log('hst pos...' + hstPos_);
@@ -29,7 +30,8 @@ $(document).ready(function() {
 		} else {
 			$('div.main .ct .hst-menu').removeClass('hst-fixed');
 		}
-	});
+	  });
+	}
 	
 	$('div.main .rp .l-avatar img, div.main .rp .lj a[type="login"]').hover(function(){
 		$('div.main .rp .signin').removeClass('active-signin'); //join may be active
@@ -53,6 +55,16 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	$('div.main .rp .lj a[type="myaccount"]').click(function(){
+		$('div.main .rp .signin[type="myaccount"]').toggleClass('active-signin');
+		console.log('clicked myaccount................');
+		return false;
+	});
+	
+	$('div.main .rp .lj a[type="myaccount"]').hover(function(){
+		$('div.main .rp .signin[type="myaccount"]').addClass('active-signin');
+	});
+	
 	$('div.main .rp .signin').mouseleave(function(){
 		$(this).removeClass('active-signin');
 	});
@@ -62,6 +74,14 @@ $(document).ready(function() {
 	});
 	$('div.signin .input .xxx.password').click(function(){
 		$('div.signin .input input[type="password"]').val('');
+	});
+	
+	$('div.signin .input .join a').click(function(){
+		$('div.main .rp .signin[type="signin"]').fadeOut(1500, function(){
+			$(this).removeClass('active-signin');
+			$('div.main .rp .signin[type="register"]').addClass('active-signin');
+		});
+		return false;
 	});
 	
 	$('div.signin .input input[type="password"]').keypress(function(e) {

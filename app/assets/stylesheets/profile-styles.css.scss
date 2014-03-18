@@ -1,0 +1,42 @@
+div.main .rp .signin[type="myaccount"]{
+  width: 350px;
+  padding: 25px;
+  padding-top: 0px;
+  height: 220px;
+}
+
+div.p-info{
+  float: left;
+  width: 200px;
+  position: relative;
+}
+
+div.p-info .dt{
+  display: table-cell;
+  vertical-align: middle;
+  height: 100px;
+  text-align: left;
+}
+
+div.p-info .dt span{
+  text-align: left;
+}
+
+div.p-info .dt span.name{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+div.main .rp .signin[type="myaccount"] hr.signin-sep {
+  width: 100%;
+  margin: auto;
+}
+
+div.signin .input input.lg-btn.sign-out{
+  background: transparent;
+  color: #C8140F;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 2px;
+  margin: 0px;
+}

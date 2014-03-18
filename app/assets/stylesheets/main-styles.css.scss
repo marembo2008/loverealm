@@ -252,6 +252,9 @@ div.main .rp .l-avatar{
 
 div.main .rp .l-avatar img{
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
 }
 
 div.main .rp .lj a, div.main .rp .lj .line{
@@ -259,6 +262,12 @@ div.main .rp .lj a, div.main .rp .lj .line{
   color: #555;
   text-decoration: none;
   margin-top: 8px;
+}
+
+div.main .rp .lj a[type="myaccount"]{
+  max-width: 200px;
+  min-width: 200px;
+  overflow: hidden;
 }
 
 div.main .rp .lj .line{

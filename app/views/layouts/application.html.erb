@@ -50,6 +50,16 @@
 					</div>
 				</div>
 				<div class="rp" align="right" style="text-align: right">
+					<% if signed_in?%>
+					<div class="lj">
+						<a href="#" type="myaccount"><%= current_user.email%></a>
+						<div class="clear"></div>
+					</div>
+					<div class="l-avatar">
+						<%= image_tag(image_path('account-pic.jpg'))%>
+					</div>
+					<%= render "users/myaccount" %>
+					<% else %>
 					<div class="lj">
 						<a href="#" type="login">Login</a>
 						<div class="line"></div>
@@ -59,8 +69,9 @@
 					<div class="l-avatar">
 						<%= image_tag(image_path('login.png'))%>
 					</div>
-					<%= render "layouts/signin" %>
+					<%= render "users/signin" %>
 					<%= render "users/register" %>
+					<% end %>
 					<div class="clear"></div>
 				</div>
 				<div class="clear"></div>
@@ -69,7 +80,30 @@
 		</div>
 		<div class="clear"></div>
 		<div class="main-bd">
-			<%= yield %>
+			<div class="main home">
+				<div class="lp home">
+					<a href="#" class="active">OUR BLOGS</a>
+					<a href="#" >Home</a>
+					<a href="#">News</a>
+					<a href="#">Finances</a>
+					<a href="#">Ask</a>
+					<a href="#">Love</a>
+					<a href="#">Christian Walk</a>
+					<a href="#">Miscellaneous</a>
+					<a href="#">Media</a>
+					<div class="loverealm-info">
+						<span> &copy; 2013, LoveRealm Ministry</span>
+						<br/>
+						<span>All rights reserved</span>
+						<br/>
+						<div class="use">
+							<a href="#">Terms of use</a>
+							<a href="#">Privacy Policy</a>
+						</div>
+					</div>
+				</div>
+				<%= yield %>
+			</div>
 		</div>
 	</body>
 </html>

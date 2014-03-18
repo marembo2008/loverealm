@@ -14,23 +14,22 @@ Loverealm::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-# email
+  # email
   config.action_mailer.raise_delivery_errors = true
 
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => 'gnibl.com',
-  :user_name            => 'gniblteam',
-  :password             => 'gnibl2013',
-  :authentication       => 'plain',
-  :enable_starttls_auto => true  }
-config.action_mailer.default_url_options = {
-    :host => 'localhost:3000',
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'gnibl.com',
+    :user_name            => 'gniblteam',
+    :password             => 'gnibl2013',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
+  config.action_mailer.default_url_options = {
+    :host => 'loverealm.herokuapp.com',
     :only_path => false
-}
-
+  }
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.

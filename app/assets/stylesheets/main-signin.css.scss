@@ -27,7 +27,7 @@ div.main .rp .signin.register{
 }
 
 div.main .rp .signin.active-signin{
-  display: block;
+  display: block !important;
 }
 
 div.signin .input{
@@ -49,6 +49,25 @@ div.signin span.trn{
   border-right: 12px solid transparent;
   border-bottom: 12px solid #fff;
   opacity: 1;
+}
+div.main .rp .signin[type="myaccount"]{
+  display: block;
+}
+div.main .rp .signin[type="myaccount"] .l-avatar{
+  float: none;
+  width: auto;
+  margin-bottom: 20px;
+}
+div.main .rp .signin[type="myaccount"] .l-avatar img{
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+div.main .rp .signin[type="myaccount"] span.trn{
+  margin-right: 188px;
 }
 
 

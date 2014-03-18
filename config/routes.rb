@@ -15,9 +15,9 @@ Loverealm::Application.routes.draw do
 
   resources :sessions, :only => [:new, :create, :destroy]
 
-  resources :users, :constraints => {:id=> /[^\/]+/}, :defaults => {:format => 'js'} do
+  resources :users, :constraints => {:id=> /[^\/]+/} do
     member do
-      get :following, :followers, :feed, :notifications
+      get :following, :followers, :feed, :notifications, :dashboard
       post :create
     end
     collection do

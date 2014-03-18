@@ -6,8 +6,6 @@ module SessionsHelper
     end
   end
 
-
-
   def sign_in(user)
     self.current_user = user
   end
@@ -27,6 +25,10 @@ module SessionsHelper
 
   def current_user
     @current_user ||=User.find_by_id(session[:user_id])
+  end
+  
+  def current_user_name
+    @name = current_user().name if signed_in?
   end
 
   def current_user=(user)

@@ -23,6 +23,11 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users = @user.followers
   end
+  
+  def dashboard
+    @user = User.find_by_email(params[:id]);
+    current_user = @user
+  end
 
   def create
     params[:user]['validated'] = 'false'
@@ -56,16 +61,16 @@ class UsersController < ApplicationController
   def validateemail
     validation_code = params[:code]
     @user = User.find_by_validation_code(validation_code)
+    #TODO (kennmunene@gmail.com) please update this logic. need to tell whether email is validated or not whenever going to dashboard
     if @user
       #@user.update_attribute("validation_code","")
       #@user.update_attribute("validated",true)
       sign_in(@user)
       puts "User has verified"
-      #redirect_to "/details"
     else
       puts "FAILED -- verification"
     end
-    redirect_to "/details" #update details page
+    redirect_to "/user/dashboard" #update details page
   end
 
 private

@@ -61,5 +61,12 @@ class User < ActiveRecord::Base
   def unfollow(other_user)
     relationships.find_by_followed_id(other_user.id).destroy
   end
+  
+  def name
+    name = '';
+    name = self.lname unless self.lname.nil
+    name = name+' '+self.fname unless self.fname.nil
+    name = self.email if name.empty?
+  end
 
 end
