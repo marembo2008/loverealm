@@ -28,15 +28,20 @@
 	</div>
 	<div class="dh">
 		<div class="dheader">
-			<a href="#">My Content</a>
+			<a href="#" class="active-option" data-href="myaccount">My Content</a>
 			<a href="#">People I love</a>
 			<a href="#">My stored posts</a>
-			<a href="#" class="active-option">Inbox</a>
+			<a href="#" data-href="inbox">Inbox</a>
 			<a href="#">Notifications</a>
 			<a href="#">Preferences</a>
 		</div>
 		<div class="dcontent">
-			<%= render "users/dashboard/inbox"%>
+			<div class="dcontent-options myaccount">
+				<%= render "users/dashboard/myaccount"%>
+			</div>
+			<div class="dcontent-options inbox">
+				<%= render "users/dashboard/inbox"%>
+			</div>
 		</div>
 	</div>
 	<div class="clear"></div>

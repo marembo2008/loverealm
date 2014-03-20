@@ -66,7 +66,6 @@ div.main .ct.profile{
 
 div.main .ct.profile .acc-info-pn{
   width: 25%;
-  border-right: 2px solid #e8e8ef;
   float: left;
 }
 
@@ -74,9 +73,10 @@ div.main .ct.profile .acc-info{
   width: 100%;
   height: 320px;
   position: relative;
-  background-image: url(image_path("SweetBrothers.jpg"));
-  background-position: 20% 20%;
-  background-size: 160% 100%;
+  background-image: url(image_path("cover-photo.jpg"));
+  background-position: 100% 0;
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
 }
 
 div.main .ct.profile .acc-info img.pp{
@@ -151,6 +151,7 @@ div.main .ct.profile .dh{
   width: 68%;
   padding: 30px 2.5%; 
   float: left;
+  border-left: 2px solid #e8e8ef;
 }
 
 div.main .ct.profile .dh .dheader{
@@ -182,15 +183,11 @@ div.main .ct.profile .dh .dcontent{
   margin: 10px 3%;
 }
 
-div.main .ct.profile .dh .dcontent .inbox{
-  width: 100%;
-  
+div.main .ct.profile .dh .dcontent .dcontent-options{
+  display: none;
 }
 
-div.main .ct.profile .dh .dcontent .inbox a{
-  text-decoration: none;
-  color: #C8140F;
-  font-weight: 300;
-  
+div.main .ct.profile .dh .dcontent .dcontent-options:first-child{
+  display: block;
 }
 

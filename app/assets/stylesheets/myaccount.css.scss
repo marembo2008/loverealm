@@ -1,0 +1,79 @@
+div.myaccount .status-update{
+  position: relative;
+  height: 170px;
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  display: none;
+}
+div.myaccount .status-update textarea{
+  height: 100%;
+  border: 1px solid #aaa;
+  width: 98%;
+  background: #fff;
+  color: #555;
+  padding: 1%;
+}
+
+div.myaccount .status-update .post-update{
+  position: absolute;
+  bottom: 4px;
+  right: -33.5%;
+  color: #555;
+  padding: 4px 2px;
+  width: auto;
+}
+div.myaccount a{
+  font-weight: 300;
+  color: #C8140F;
+  text-decoration: none;
+}
+
+div.myaccount .art{
+  border-bottom: 1px solid #eee;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+div.myaccount .art .art-hd h1{
+ float: left;
+ width: 93%;
+ font-size: 34px;
+ overflow: hidden;
+ margin-bottom: 0px;
+}
+
+div.myaccount .art .art-hd a.exp{
+  width: 25px;
+  margin-left: 1%;
+  float: right;
+  background-image: url(image_path('icon-chevron-down-128.png'));
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 25px;
+  margin-top: 45px;
+}
+
+div.myaccount .art p{
+  font-size: 15px;
+  color: #666;
+  line-height: 25px;
+}
+
+div.myaccount .art p.summ{
+  margin-top: 5px;
+}
+
+div.myaccount .art p.art-det, div.myaccount .art p.art-det a{
+  font-size: 14px;
+  color: #666;
+}
+
+div.myaccount .art p.art-det a:hover{
+  color: #C8140F;
+}
+
+
+
+
