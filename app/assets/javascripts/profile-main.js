@@ -1,4 +1,5 @@
 $(function() {
+	jQuery.fx.interval = 10;
 	$('div.main .ct.profile .dh .dheader a').click(function() {
 		//get the href
 		var href = $(this).data('href');
@@ -14,21 +15,20 @@ $(function() {
 
 	$('a#add-account').click(function() {
 		var active = $(this).data('active');
-		console.log('active=' + active);
-		if (active === 'false') {
+		if (active === false) {
 			//show status update
-			$('div#status-update-panel').slideDown(1000, function() {
+			$('div#status-update-panel').slideDown(300, function() {
 				$(this).show();
 				$('span#status-update').show();
 			});
-			$(this).data('active', 'true');
+			$(this).data('active', true);
 		} else {
 			//hide status update
-			$('div#status-update-panel').slideUp(1000, function() {
+			$('div#status-update-panel').slideUp(300, function() {
 				$(this).hide();
 				$('span#status-update').hide();
 			});
-			$(this).data('active', 'false');
+			$(this).data('active', false);
 		}
 		return false;
 	});
