@@ -1,0 +1,11 @@
+<div class="notifications">
+	<% 0.upto(2) do |c| %>
+	<%= render "users/dashboard/notifications/comment_notification"%>
+	<% end %>
+	<% 0.upto(1) do |c| %>
+	<%= render "users/dashboard/notifications/comment_notification_reply"%>
+	<% end %>
+	<% 0.upto(2) do |c| %>
+	<%= render "users/dashboard/notifications/love_notification"%>
+	<% end %>
+</div>

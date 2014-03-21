@@ -32,4 +32,11 @@ $(function() {
 		}
 		return false;
 	});
+
+	//font-size changes.
+	var classStyles = 'div.pref .pref-option .op-detail span.s-small,div.pref .pref-option .op-detail span.s-medium,div.pref .pref-option .op-detail span.s-big';
+	$(classStyles).click(function() {
+		$(classStyles).removeClass('selected');
+		$(this).addClass('selected');
+	});
 });

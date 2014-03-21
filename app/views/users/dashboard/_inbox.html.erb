@@ -1,11 +1,7 @@
 <div class="inbox">
 	<a href="#">+ Send new message</a>
 	<br/>
-	<%= render "users/dashboard/inbox_msg"%>
-	<%= render "users/dashboard/inbox_msg"%>
-	<%= render "users/dashboard/inbox_msg"%>
-	<%= render "users/dashboard/inbox_msg"%>
-	<%= render "users/dashboard/inbox_msg"%>
-	<%= render "users/dashboard/inbox_msg"%>
-	<%= render "users/dashboard/inbox_msg"%>
+	<% 0.upto(3) do |c| %>
+	<%= render "users/dashboard/inbox/inbox_msg"%>
+	<% end %>
 </div>

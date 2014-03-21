@@ -29,18 +29,27 @@
 	<div class="dh">
 		<div class="dheader">
 			<a href="#" class="active-option" data-href="myaccount">My Content</a>
-			<a href="#">People I love</a>
+			<a href="#" data-href="people-i-love">People I love</a>
 			<a href="#">My stored posts</a>
 			<a href="#" data-href="inbox">Inbox</a>
-			<a href="#">Notifications</a>
-			<a href="#">Preferences</a>
+			<a href="#" data-href="notifications">Notifications</a>
+			<a href="#" data-href="preferences">Preferences</a>
 		</div>
 		<div class="dcontent">
 			<div class="dcontent-options myaccount">
 				<%= render "users/dashboard/myaccount"%>
 			</div>
+			<div class="dcontent-options people-i-love">
+				<%= render "users/dashboard/love"%>
+			</div>
 			<div class="dcontent-options inbox">
 				<%= render "users/dashboard/inbox"%>
+			</div>
+			<div class="dcontent-options notifications">
+				<%= render "users/dashboard/notifications"%>
+			</div>
+			<div class="dcontent-options preferences">
+				<%= render "users/dashboard/preferences"%>
 			</div>
 		</div>
 	</div>

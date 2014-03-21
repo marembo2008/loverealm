@@ -1,0 +1,116 @@
+div.main .ct.profile .dh .dcontent .love{
+  width: 100%;
+}
+
+
+div.p-i-love{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 30px;
+}
+
+div.p-i-love .notif-p-photo{
+  width: 10%;
+  float: left;
+}
+
+div.p-i-love .notif-p-photo img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+div.p-i-love .msg {
+  width: 90%;
+  float: left;
+  padding-bottom: 30px;
+}
+
+div.p-i-love .msg .notif-options{
+  position: relative;
+}
+
+div.p-i-love .msg span.name{
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+div.p-i-love.reply .msg span.name{
+  color: #00aa44;
+  font-weight: 600;
+}
+
+div.p-i-love .msg p.message{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  overflow: hidden;
+  color: #555;
+  cursor: pointer;
+}
+
+div.p-i-love .msg a.msg-del{
+  position: absolute;
+  background: #fff;
+  display: inline-block;
+  padding: 5px 0px;
+  text-decoration: none;
+  color: #C8140F;
+}
+
+div.p-i-love.reply .msg a.msg-del{
+  color: #00aa44;
+}
+
+div.p-i-love .msg span.date{
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  background: #fff;
+  padding: 5px;
+}
+
+div.s-p-l{
+  width: 100%;
+}
+
+div.s-p-l h1{
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+  margin: 0px;
+}
+
+div.s-p-l span.l-info{
+  font-size: 17px;
+  color: #444;
+}
+
+div.s-p-l .s-p{
+  color: #f8140F;
+  width: 140px;
+  font-size: 16px;
+  border-bottom: 1px solid #efefef;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+div.p-i-love.suggested-p{
+  float: left;
+  width: 32%;
+  margin-right: 1%;
+  border: 0px none;
+  margin-bottom: 5px;
+  margin-top: 3px;
+}
+div.p-i-love.suggested-p .notif-p-photo{
+  width: 30%;
+}
+div.p-i-love.suggested-p .msg{
+ width: 70%; 
+}
+
+

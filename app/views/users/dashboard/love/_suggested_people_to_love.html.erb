@@ -1,0 +1,11 @@
+<div class="s-p-l">
+	<h1>You have no network of people you 'Love yet'</h1>
+	<span class="l-info">'Love' people to receive updates of their latest posts and statuses</span>
+	<br/>
+	<div class="s-p">
+		Suggested Profiles:
+	</div>
+</div>
+<% 0.upto(2) do |c| %>
+<%= render "users/dashboard/love/suggested_profile"%>
+<% end %>

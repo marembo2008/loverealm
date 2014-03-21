@@ -1,0 +1,78 @@
+div.main .ct.profile .dh .dcontent .notifications{
+  width: 100%;
+}
+
+
+div.notification-msg{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 30px;
+}
+
+div.notification-msg .notif-p-photo{
+  width: 10%;
+  float: left;
+}
+
+div.notification-msg .notif-p-photo img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+div.notification-msg .msg {
+  width: 90%;
+  float: left;
+  padding-bottom: 30px;
+}
+
+div.notification-msg .msg .notif-options{
+  position: relative;
+}
+
+div.notification-msg .msg span.name{
+  font-weight: bold;
+  font-size: 20px;
+  color: #C8140F;
+}
+
+div.notification-msg.reply .msg span.name{
+  color: #00aa44;
+  font-weight: 600;
+}
+
+div.notification-msg .msg p.message{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  overflow: hidden;
+  color: #555;
+  cursor: pointer;
+}
+
+div.notification-msg .msg a.msg-del{
+  position: absolute;
+  background: #fff;
+  display: inline-block;
+  padding: 5px 0px;
+  text-decoration: none;
+  color: #C8140F;
+}
+
+div.notification-msg.reply .msg a.msg-del{
+  color: #00aa44;
+}
+
+div.notification-msg.love-notif .msg a.msg-del, 
+div.notification-msg.love-notif .msg span.name{
+  color: #222;
+}
+
+div.notification-msg .msg span.date{
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  background: #fff;
+  padding: 5px;
+}

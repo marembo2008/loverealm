@@ -1,0 +1,82 @@
+div.pref{
+  width: 100%;
+}
+
+div.pref .pref-option{
+  border-top: 1px solid #efe8e4;
+  position: relative;
+  margin-top: 50px;
+}
+
+div.pref .pref-option .op-title{
+  position: absolute;
+  background: #fff;
+  padding-right: 20px;
+  padding-left: 10px;
+  top: -12px;
+  color: #666;
+}
+
+div.pref .pref-option a.edit-profile{
+  position: absolute;
+  right: 0px;
+  color: #C8140F;
+  text-decoration: none;
+}
+
+div.pref .pref-option .op-detail{
+  margin-left: 100px;
+  margin-top: 5px;
+}
+
+div.pref .pref-option .op-detail span,
+div.pref .pref-option .op-detail p{
+  font-size: 16px;
+  color: #333;
+  width: 80%;
+}
+
+div.pref .pref-option .op-detail span.in-val{
+  padding-left: 5px;
+  margin-left: 5px;
+}
+div.pref .pref-option .op-detail span.font-size{
+  display: inline-block;
+  position: relative;
+}
+div.pref .pref-option .op-detail span.s-small,
+div.pref .pref-option .op-detail span.s-medium,
+div.pref .pref-option .op-detail span.s-big{
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 11px;
+  width: 8px;
+  position: absolute;
+  top: -4px;
+  padding: 8px 2px 0 2px;
+}
+div.pref .pref-option .op-detail span.s-medium{
+  font-size: 16px;
+  width: 10px;
+  left: 90px;
+  top: -8px;
+  padding: 8px 4px 0 2px;
+}
+
+div.pref .pref-option .op-detail span.s-big{
+  font-size: 20px;
+  width: 12px;
+  top: -13px;
+  left: 110px;
+  padding: 8px 5px 0 2px;
+}
+
+div.pref .pref-option .op-detail span.s-small.selected,
+div.pref .pref-option .op-detail span.s-medium.selected,
+div.pref .pref-option .op-detail span.s-big.selected{
+  background: #C8140F;
+  color: #fff;
+}
