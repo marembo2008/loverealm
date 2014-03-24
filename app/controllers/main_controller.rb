@@ -7,5 +7,9 @@ class MainController < ApplicationController
   end
 
  def user_details
+@user = current_user
+@status_update = StatusUpdate.new
+@article = Post.new
 end
+
 end

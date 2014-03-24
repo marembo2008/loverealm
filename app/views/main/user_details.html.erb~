@@ -1,2 +1,19 @@
 Welcome <%= current_user.email %>
-Thanks for validating
+Thanks for validating. Fill in the rest of your details
+</br>
+Post your status here
+</br>
+<%= form_for(@status_update, :url => 'update_status') do |f| %>
+<%= f.text_field :description%>
+<%= f.submit("Update") %>
+<% end %>
+</br><hr>
+</br>
+Post an article
+<%= form_for(@article) do |f| %>
+<%= f.text_field :subtitle %>
+</br>
+<%= f.text_field :content %>
+</br>
+<%= f.submit("Post")%>
+<% end %>
