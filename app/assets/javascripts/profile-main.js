@@ -17,20 +17,45 @@ $(function() {
 		var active = $(this).data('active');
 		if (active === false) {
 			//show status update
-			$('div#status-update-panel').slideDown(300, function() {
+			$('p#add-content-option').slideDown(300, function() {
 				$(this).show();
-				$('span#status-update').show();
 			});
 			$(this).data('active', true);
 		} else {
 			//hide status update
-			$('div#status-update-panel').slideUp(300, function() {
+			$('p#add-content-option').slideUp(300, function() {
 				$(this).hide();
-				$('span#status-update').hide();
 			});
 			$(this).data('active', false);
 		}
 		return false;
+	});
+
+	$('p#add-content-option input[type="radio"]').change(function() {
+		if ($(this).is(':checked')) {
+			var info = ' : ' + $(this).val();
+			var panel = $(this).data('panel');
+			var hidecontent = $(this).data('hidecontent');
+			//close all of them
+			$('div.status-update').slideUp(300, function() {
+				$(this).hide();
+				$('span#status-update').hide();
+			});
+			//if it was hidden, unhide
+			$('#my-content').show();
+			//then show the current
+			$('div#' + panel).slideDown(300, function() {
+				$(this).show();
+				$('span#status-update').html(info);
+				$('span#status-update').show();
+				//let it go away
+				$('p#add-content-option').hide();
+				if (hidecontent === true) {
+					$('#my-content').hide();
+				}
+			});
+			return false;
+		}
 	});
 
 	//font-size changes.

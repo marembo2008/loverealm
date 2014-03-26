@@ -1,0 +1,19 @@
+<div style="margin-bottom: 0px">
+	<a id="add-account" data-active="false" href="#">+ Add Content</a>
+	<span id="status-update" style="display: none"> : Status Update</span>
+	<p id="add-content-option" style="display: none">
+		<input type="radio" name="content-type" value="Status Update" data-panel="status-update-panel"/>
+		<span id="status-update-select">Status Update</span>
+		<br/>
+		<input type="radio" name="content-type" value="Post Article" data-panel="post-article-panel" data-hidecontent="true"/>
+		<span id="post-article-select">Post Article</span>
+	</p>
+</div>
+<div id="status-update-panel" class="status-update">
+	<textarea placeholder="Type your update here...." maxlength="144"></textarea>
+	<input type="submit" class="lg-btn post-update" value="Post Update" />
+</div>
+
+<div id="post-article-panel" class="status-update">
+	<%= render "users/dashboard/addcontent/postarticle"%>
+</div>

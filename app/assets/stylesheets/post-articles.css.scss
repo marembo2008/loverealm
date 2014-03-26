@@ -1,0 +1,55 @@
+div.pah{
+  width: 100%;
+  background-color: #000;
+  max-height: 200px;
+  min-height: 200px;
+}
+
+div.pah .cb{
+  float: right;
+  width: 100px;
+  height: 38px;
+  position: relative;
+  background-color: #fff;
+}
+
+div.pah .cb img{
+  width: 40%;
+  left: 2%;
+  top: 0;
+  position: absolute;
+}
+
+div.pah .cb span.change-b{
+  position: absolute;
+  bottom: -20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  left: -20px;
+}
+div.pah input.a-t, div.pah input.a-s-t{
+  font-weight: bold;
+  color: #fff;
+  border: 0px none;
+  margin-left: 20px;
+  width: 90%;
+}
+
+div.pah input.a-t{
+  font-size: 38px;
+}
+
+div.pah input.a-s-t{
+  font-size: 25px;
+  font-style: italic;
+}
+
+div.mce-edit-area, iframe#editor-panel-content_ifr {
+  height: 450px !important;
+}
+iframe#editor-panel-content_ifr p{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+

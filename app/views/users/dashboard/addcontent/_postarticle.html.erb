@@ -1,0 +1,20 @@
+<div class="pah">
+	<div class="cb">
+		<%= image_tag(image_path('519587-084_Photo-128.png'))%>
+		<span class="change-b">Change Background</span>
+	</div>
+	<div class="clear"></div>
+	<br/>
+	<input type="text" placeholder="Type your title here" class="a-t" />
+	<br/>
+	<input type="text" placeholder="Type your subtitle here" class="a-s-t" />
+</div>
+<script src="//tinymce.cachefly.net/4.0/tinymce.min.js"></script>
+<script type="text/javascript">
+	tinymce.init({
+		selector : 'div#editor-panel-content'
+	}); 
+</script>
+<div id="editor-panel=header"></div>
+<div id="editor-panel-content" class="post-article"></div>
+<div class="clear"></div>

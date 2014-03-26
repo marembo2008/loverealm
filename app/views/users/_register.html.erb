@@ -1,7 +1,7 @@
-<%= form_for(:user, :url => users_path, :remote=>true) do |f| %>
 <div class="signin register" type="register">
 	<span class="trn"></span>
 	<div class="input">
+		<%= form_for(:user, :url => users_path, :remote=>true) do |f| %>
 		<%= f.text_field :email, :placeholder=>"Email"%>
 		<%= f.password_field :password, :placeholder=>"Password"%>
 		<%= f.password_field :password_confirmation, :placeholder=>"Confirm your passwod"%>
@@ -12,6 +12,7 @@
 			CAPS ON
 		</div>
 		<%= f.submit :class=>"lg-btn", :value=>"Sign Up"%>
+		<% end %>
 		<hr class="signin-sep" />
 		<br/>
 		<div class="login-social">
@@ -25,4 +26,3 @@
 		<br/>
 	</div>
 </div>
-<% end %>
