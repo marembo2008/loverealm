@@ -1,0 +1,81 @@
+div.main .ct.aj{
+  width: 85%;
+  margin-left: 1%;
+  background-color: #fff;
+}
+
+div.main .ct.aj .pict{
+  width: 100%;
+  height: 350px;
+  background-image: url(image_path('jesus.jpg'));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0px 3px;
+}
+
+div.main .ct.aj .abj{
+  width: 98%;
+  padding: 1%;
+}
+
+div.main .ct.aj .abj .verse{
+  float: left;
+  width: 30%;
+}
+
+div.main .ct.aj .abj .verse p, div.main .ct.aj .abj .verse p.av, div.main .ct.aj .abj .abj-ct p{
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+
+div.main .ct.aj .abj .verse .av{
+  color: #C8140F;
+}
+
+div.main .ct.aj .abj .abj-ct{
+  float: left;
+  width: 69%;
+  margin-left: 1%;
+}
+
+div.main .ct.aj .abj .abj-ct p, div.main .ct.aj .abj .abj-ct p span{
+  font-size: 27px;
+}
+
+@media only screen and (max-width: 1025px){
+  div.main .ct.aj{
+    width: 95%;
+  }
+  div.main .ct.aj .pict{
+    height: 250px;
+  }
+  
+  div.main .ct.aj .abj .verse p, div.main .ct.aj .abj .verse p.av{
+    font-size: 17px;
+  }
+  div.main .ct.aj .abj .abj-ct p, div.main .ct.aj .abj .abj-ct p span{
+  font-size: 22px;  
+  }
+}
+
+@media only screen and (max-width: 600px){
+  div.main .ct.aj{
+    margin-top: 20px;
+  }
+  div.main .ct.aj .pict{
+    height: 120px;
+    background-position: 0px;
+  }
+  div.main .ct.aj .abj .verse p, div.main .ct.aj .abj .verse p.av{
+    font-size: 12px;
+  }
+  div.main .ct.aj .abj .abj-ct p, div.main .ct.aj .abj .abj-ct p span{
+    font-size: 16px;  
+  }
+  div.main .ct.aj .abj .verse, div.main .ct.aj .abj .abj-ct{
+    width: 98%;
+  }
+}

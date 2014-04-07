@@ -1,0 +1,133 @@
+div.main .ct.au{
+  width: 85%;
+  margin-left: 1%;
+  background-color: #fff;
+}
+
+div.main .ct.au .pict{
+  width: 100%;
+  height: 350px;
+  background-image: url(image_path('SweetBrothers.jpg'));
+  background-repeat: no-repeat;
+  background-size: 100% 200%;
+  background-position: 0px -100px;
+}
+
+div.main .ct.au .au-m-menu{
+  width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+div.main .ct.au .au-menu{
+  text-align: right;
+  width: 100%;
+  background-color: #000;
+}
+
+div.main .ct.au .au-menu a{
+  text-align: left;
+  display: inline-block;
+  padding: 1%;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div.main .ct.au .au-menu a.m-active{
+  background-color: #C8140F;
+}
+
+div.main .ct.au .abj{
+  width: 98%;
+  padding: 1%;
+}
+
+div.main .ct.au .abj .verse{
+  float: left;
+  width: 30%;
+}
+
+div.main .ct.au .abj .verse p, div.main .ct.au .abj .verse p.av, div.main .ct.au .abj .abj-ct p{
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: left;
+}
+
+div.main .ct.au .abj .verse p.fac{
+  font-size: 16px;
+  margin: 2px;
+}
+
+div.main .ct.au .abj .verse .av{
+  color: #C8140F;
+}
+
+div.main .ct.au .abj .abj-ct{
+  float: left;
+  width: 69%;
+  margin-left: 1%;
+}
+
+div.main .ct.au .abj .abj-ct p, div.main .ct.au .abj .abj-ct p span{
+  font-size: 27px;
+}
+
+@media only screen and (max-width: 1025px){
+  div.main .ct.au{
+    width: 95%;
+  }
+  div.main .ct.au .pict{
+    height: 200px;
+    background-size: 100% 220%;
+    background-position: 0px -80px;
+  }
+  div.main .ct.au .abj .verse p, div.main .ct.au .abj .verse p.av{
+    font-size: 17px;
+  }
+  div.main .ct.au .abj .abj-ct p, div.main .ct.au .abj .abj-ct p span{
+  font-size: 22px;  
+  }
+}
+
+@media only screen and (max-width: 800px){
+  div.main .ct.au .au-menu{
+    width: 120%;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  div.main .ct.au .au-menu{
+    width: 160%;
+  }
+  div.main .ct.au{
+    margin-top: 20px;
+  }
+  div.main .ct.au .pict{
+    height: 120px;
+    background-position: 0px;
+  }
+  div.main .ct.au .abj .verse p, div.main .ct.au .abj .verse p.av{
+    font-size: 12px;
+  }
+  div.main .ct.au .abj .abj-ct p, div.main .ct.au .abj .abj-ct p span{
+    font-size: 16px;  
+  }
+  div.main .ct.au .abj .verse, div.main .ct.au .abj .abj-ct{
+    width: 98%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  div.main .ct.au .au-menu{
+    width: 200%;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  div.main .ct.au .au-menu{
+    width: 250%;
+  }
+}

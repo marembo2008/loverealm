@@ -6,6 +6,8 @@ Loverealm::Application.routes.draw do
 # root 'welcome#index'
   root :to => 'main#home'
   get 'main/home'
+  match '/about-jesus', to: 'main#aboutJesus', via:[:get, :post]
+  match '/about-us', to: 'main#aboutUs', via:[:get, :post]
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
