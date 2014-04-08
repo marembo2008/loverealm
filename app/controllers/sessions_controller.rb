@@ -13,7 +13,6 @@ class SessionsController <  ApplicationController
   def create
     @message = '';
     if signed_in?
-      #redirect_to "/users/#{current_user.html_safe_username}/feed"
       @message= "Already signed in"
       respond_to do |format|
         format.js {render "info/message"}
@@ -25,10 +24,14 @@ class SessionsController <  ApplicationController
       #sign in normally via facebook
       data = request.env['omniauth.auth'].extra.raw_info
       unless @auth = Authorization.from_omniauth(env["omniauth.auth"])
+        puts "create auth from hash"
         @auth = Authorization.create_from_hash(auth,current_user,data)
       end
-      sign_in(@auth.user)
-      redirect_to "/users/#{user.html_safe_username}" && return
+      puts "authorization #{@auth}"
+      puts "user id from authoriztion #{@auth.uid}"
+      @user = User.find_by_uid(@auth.uid);
+      sign_in(@user)
+      redirect_to "/users/#{@user.email}/dashboard"
     else
       #sign in normally via email/password
       user = User.find_by_email(params[:session][:email])
