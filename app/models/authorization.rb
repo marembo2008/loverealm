@@ -7,8 +7,8 @@ class Authorization < ActiveRecord::Base
       authorization.oauth_token = auth.credentials.token
       authorization.oauth_expires_at = Time.at(auth.credentials.expires_at)
       #create a user for this authorization.
-      dummy_email = "everyone@dummy.com"
-      @user = User.new(:fname => auth.info.name, :email => dummy_email)
+      email = auth.info.email
+      @user = User.new(:fname => auth.info.first_name, :lname => auth.info.last_name, :email => email)
       @user.password = auth.info.name
       @user.password_confirmation = auth.info.name
       @user.uid = auth.uid
