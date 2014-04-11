@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :authorizations
 
-  has_many :posts, :dependent => :destroy
+  has_many :posts, :foreign_key => "user_id", :dependent => :destroy
   has_many :relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :followed_users, :through => :relationships, :source => :followed
   has_many :reverse_relationships, :foreign_key => "followed_id",

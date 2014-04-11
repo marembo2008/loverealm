@@ -24,6 +24,16 @@ class UsersController < ApplicationController
   @user = current_user
   end
 
+  def update_status
+     @stat_update = current_user.status_updates.build(status_update_params)
+if @stat_update.save
+puts "status update #{@stat_update.uid} says #{@stat_update.description}"
+else
+puts "status update FAILED"
+end
+     redirect_to "/details"
+  end
+
   def update
       if @user.update(user_params)
 puts "update success"
@@ -97,6 +107,10 @@ redirect_to "/details"
   end
 
 private
+
+def status_update_params
+params.require(:status_update).permit(:description)
+end
 
  def user_params
     params.require(:user).permit(:email,:password,:password_confirmation, :validated, :validation_code, :fname, :lname)
