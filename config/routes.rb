@@ -16,6 +16,7 @@ Loverealm::Application.routes.draw do
 
   match '/signin', :to => 'main#signin', via: [:get,:post]
   match '/details', :to => 'main#user_details', via: [:get,:post]
+  match '/search', :to => 'search#search', via: [:get, :post]
 
   resources :sessions, :only => [:new, :create, :destroy]
 

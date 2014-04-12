@@ -1,0 +1,95 @@
+div.main .ct.srp{
+  background-color: #fff;
+  margin-left: 14px;
+  width: 84.6%;
+  padding-top: 20px;
+  border: 0.2em solid #ededed;
+}
+
+div.srp .search-result{
+  width: 60.5%;
+  padding: 0 1%;
+  min-height: 400px;
+  float: left;
+  border-right: 1px solid #f0f0f0;
+}
+
+div.srp .search-result .s-result{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 95%;
+  border-bottom: 1px solid #efefef;
+  height: 80px;
+  overflow: hidden;
+}
+
+div.srp .search-result .s-result a{
+  color: #003377;
+}
+
+div.srp .search-result .s-result p{
+  margin: 1px;
+  color: #777;
+  margin-top: 3px;
+}
+
+div.srp .search-interest{
+  width: 31.5%;
+  padding: 0 2%;
+  float: left;
+}
+
+div.srp .search-interest p{
+  margin: 5px;
+  color: #C8140F;
+  font-size: 16px;
+}
+
+div.srp .search-interest .interests{
+  position: relative;
+  margin-top: 20px;
+  height: 60px;
+}
+
+div.srp .search-interest .interests img{
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+}
+
+div.srp .search-interest .interests p{
+  position: absolute;
+  left: 60px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+}
+
+
+@media only screen and (max-width: 1025px){
+  div.main .ct.srp{
+    width: 96.2%;
+    margin-left: -4px;
+  }
+  div.srp .search-result .s-result a, div.srp .search-result .s-result p{
+   font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px){
+  div.main .ct.srp{
+    width: 86%;
+    margin: auto 6% auto 7.5%;
+  }
+  div.srp .search-result, div.srp .search-interest {
+    width: 100%;
+    text-align: left;
+    border: 0px none;
+  }
+  div.srp .search-result .s-result a, div.srp .search-result .s-result p{
+   text-align: left;
+   font-size: 11px;
+  }
+}
