@@ -1,0 +1,179 @@
+div.main .ct.pds{
+  background-color: #fff;
+  margin-left: 14px;
+  width: 84.6%;
+  border: 0.2em solid #ededed;
+  overflow-y: auto;
+  height: 570px;
+}
+
+div.main .ct.pds .p-tt{
+  background-image: url(image_path('writing.jpg'));
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  width: 100%;
+  height: 570px;
+  position: relative;
+}
+
+div.main .ct.pds .p-tt .s-tt{
+  background-color: #fff;
+  bottom: 10px;
+  left: -60px;
+  width: 60px;
+  position: absolute;
+}
+
+div.main .ct.pds .p-tt .s-tt img{
+  width: 70%;
+  margin: 5px 15%;
+}
+
+div.main .ct.pds .p-tt a.r-tt-report{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+}
+
+div.main .ct.pds .p-tt div.a-tt-author,
+div.main .ct.pds .p-tt div.t-tt-title,
+div.main .ct.pds .p-tt div.s-tt-summary{
+  position: absolute;
+  width: 60%;
+  left: 15%;
+}
+
+div.main .ct.pds .p-tt div.t-tt-title{
+  top: 30%;
+  color: #fff;
+  line-height: 100%;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+div.main .ct.pds .p-tt div.s-tt-summary{
+  bottom: 20%;
+  color: #aaa;
+  line-height: 120%;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+div.main .ct.pds .p-tt div.a-tt-author{
+  bottom: 12%;
+}
+
+div.main .ct.pds .p-tt div.a-tt-author img{
+  width: 40px;
+  height: 40px;
+  float: left;
+  border-radius: 100px;
+}
+
+div.main .ct.pds .p-tt div.a-tt-author span{
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #aaa;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control{
+  position: absolute;
+  left: 0px;
+  top: 90%;
+  width: 100%;
+  height: 10%;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.love-post,
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.already-loved-post,
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.scroll-post,
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.save-post,
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.post-font{
+  position: absolute;
+  top: 10px;
+}
+
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.love-post{
+  left: 10px;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  background-image: url(image_path('heart.png'));
+  background-size: 40px 35px;
+  background-repeat: no-repeat;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.love-post:hover{
+  background-image: url(image_path('heart_enter.png'));
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.love-post span{
+  display: inline-block;
+  margin-left: 50px;
+  margin-top: 8px;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.already-loved-post{
+  left: 180px;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.already-loved-post img{
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.scroll-post{
+  width: 0;
+  height: 0;
+  display: inline-block;
+  content: "&darr;";
+  text-indent: -99999px;
+  vertical-align: top;
+  margin-top: 10px;
+  margin-right: 95px;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 18px solid #000;
+  opacity: 1;
+  left: 48%;
+  cursor: pointer;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.save-post{
+  right: 15%;
+  width: 200px;
+  height: 30px;
+  background-image: url(image_path('save.png'));
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  margin-top: 7px;
+  display: inline-block;
+  text-decoration: none;
+  border-right: 1px solid #efefef;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m a.save-post span{
+  display: inline-block;
+  margin-left: 40px;
+  margin-top: 5px;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.post-font{
+  right: 5px;
+}
+
+div.main .ct.pds .p-tt div.c-tt-control .c-tt-control_m div.post-font span{
+  margin-top: 15px;
+  display: inline-block;
+}

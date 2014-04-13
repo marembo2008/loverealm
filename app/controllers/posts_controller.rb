@@ -3,8 +3,12 @@ class PostsController < ApplicationController
 
   end
 
-  def show
+  def view
 
+  end
+  
+  def show
+    
   end
 
   def destroy
@@ -15,9 +19,8 @@ class PostsController < ApplicationController
   end
 
   def create
-puts "creating article"
+    puts "creating article"
     @article = current_user.posts.build(article_params)
-
     if @article.save
       puts "article posted"
     else
